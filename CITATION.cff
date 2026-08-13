@@ -14,9 +14,8 @@ authors:
   - family-names: Shen
     given-names: Jie
     orcid: "https://orcid.org/0000-0003-2295-2603"
-version: 2.1.0
+version: 2.1.1
 date-released: 2026-08-13
 repository-code: "https://github.com/Jimmmmgh/blood-pressure-label-instability"
 url: "https://github.com/Jimmmmgh/blood-pressure-label-instability"
 license: MIT
-

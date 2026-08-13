@@ -48,11 +48,10 @@ python scripts/verify_analysis_determinism_v2_1.py
 
 The raw-source extraction and local database-connection layer is intentionally excluded because it contains infrastructure-specific logic and could expose protected resources. The frozen field contract documents the required variables and source semantics.
 
-## Version 2.1.0
+## Version 2.1.1
 
-Version 2.1.0 corrects MIMIC-IV age at ICU admission to `anchor_age + year(intime) - anchor_year`, completes the prespecified eICU APACHE IVa multiple-imputation sensitivity, completes remaining cohort-rule sensitivities, and makes deterministic comparison independent of anonymous patient row order. The correction changed age-derived summaries and adjusted models but did not change cohort membership, paired measurements, discordance classifications, or primary measurement estimates.
+Version 2.1.1 contains scientific package version 2.1 and adds deterministic LF checkout rules so that the file manifest verifies after a Windows clone. Scientific package version 2.1 corrects MIMIC-IV age at ICU admission to `anchor_age + year(intime) - anchor_year`, completes the prespecified eICU APACHE IVa multiple-imputation sensitivity, completes remaining cohort-rule sensitivities, and makes deterministic comparison independent of anonymous patient row order. The correction changed age-derived summaries and adjusted models but did not change cohort membership, paired measurements, discordance classifications, or primary measurement estimates.
 
 ## License and citation
 
 Analysis code is released under the MIT License. The license does not apply to source datasets. Cite the repository using `CITATION.cff` and cite the eventual article when its bibliographic record becomes available.
-
