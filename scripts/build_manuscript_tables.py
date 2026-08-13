@@ -188,21 +188,23 @@ def main() -> int:
     table2 = build_table2()
     table3 = build_table3()
     output = [
-        "# Manuscript tables",
-        "",
-        "## Table 1. Source-specific cohort characteristics",
+        "**Table 1. Source-specific cohort characteristics**",
         "",
         markdown_table(table1),
         "",
-        "## Table 2. Measurement-source instability",
+        "**Table 1 legend.** The first eligible adult ICU stay/case per person with at least three valid first-day pairs was retained. Landmark counts precede the exclusion of two eICU participants with unknown sex from adjusted models; the resulting common-adjustment population included 7,292 participants and 1,071 deaths.",
+        "",
+        "**Table 2. Measurement-source instability**",
         "",
         markdown_table(table2),
         "",
-        "## Table 3. Policy-specific mortality association sensitivity",
+        "**Table 2 legend.** CCD denotes clinically consequential discordance: exactly one modality below 65 mmHg plus an absolute inter-modality difference >=10 mmHg. Proportions are equal-person weighted. Stable-policy coverage is the proportion outside the review/indeterminate state. Dispersion limits are the pair-level mean cuff-arterial difference +/-1.96 SD, with the patient as the bootstrap resampling unit; they are not controlled repeated-measures agreement estimates.",
+        "",
+        "**Table 3. Policy-specific mortality association sensitivity**",
         "",
         markdown_table(table3),
         "",
-        "AMRD is the average marginal risk difference for the realized increase produced by adding 0.10 to each patient's burden, capped at 1.0; the mean realized increment was approximately 0.09-0.10. Associations are not causal effects.",
+        "**Table 3 legend.** AMRD is the standardized average marginal risk difference from adding 0.10 to each patient's burden, capped at 1.0; the mean realized increment was approximately 0.09-0.10. Severity scores were SAPS 3, APS III, and APACHE IVa in SICdb, MIMIC-IV, and eICU. All values are prognostic associations, not causal effects.",
     ]
     (TABLE_ROOT / "MAIN_TABLES.md").write_text("\n".join(output) + "\n", encoding="utf-8")
     print("Wrote three manuscript tables")
