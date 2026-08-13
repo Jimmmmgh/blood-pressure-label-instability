@@ -1,0 +1,15 @@
+metric,value
+tasks,2749.0
+load_success,2749.0
+load_error,0.0
+triplet_aligned_cases,2567.0
+cases_with_any_plausible_state_change,2519.0
+plausible_state_change_episodes,25623.0
+coverage_eligible_windows,25359.0
+cases_with_at_least_three_coverage_eligible_windows,2359.0
+waveform_quality_pass_windows,12177.0
+quality_pass_fraction_among_coverage_eligible,0.48018454986395365
+numeric_waveform_concordant_windows,7599.0
+technical_subset_windows,6810.0
+technical_subset_people,1548.0
+raw_waveform_gate_pass,0.0

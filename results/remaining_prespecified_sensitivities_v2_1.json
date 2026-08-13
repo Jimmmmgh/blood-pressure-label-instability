@@ -1,0 +1,187 @@
+{
+  "generated_at_utc": "2026-08-13T00:34:21.478256+00:00",
+  "analysis_version": "2.1 post-analysis completion of prespecified sensitivities",
+  "outcomes_read": false,
+  "all_eligible_stays_first24": {
+    "sicdb": {
+      "people": 1510,
+      "pairs": 31149,
+      "ccd_fraction": 0.15062468476737365,
+      "ci_low": 0.14038518343144912,
+      "ci_high": 0.16074012433224222,
+      "pair_weighted_ccd": 0.15836784487463482,
+      "pairs_per_person_median": 9.0,
+      "pairs_per_person_p25": 5.0,
+      "pairs_per_person_p75": 20.0,
+      "stays": 1561,
+      "people_with_multiple_eligible_stays": 48,
+      "primary_cohort_union_safeguard": true
+    },
+    "mimic_iv": {
+      "people": 4171,
+      "pairs": 35198,
+      "ccd_fraction": 0.1320530658243843,
+      "ci_low": 0.12622448564288039,
+      "ci_high": 0.1380515714833703,
+      "pair_weighted_ccd": 0.1307176544121825,
+      "pairs_per_person_median": 6.0,
+      "pairs_per_person_p25": 4.0,
+      "pairs_per_person_p75": 11.0,
+      "stays": 4316,
+      "people_with_multiple_eligible_stays": 137,
+      "primary_cohort_union_safeguard": true
+    },
+    "eicu": {
+      "people": 9017,
+      "pairs": 174503,
+      "ccd_fraction": 0.133589470623362,
+      "ci_low": 0.12955615814746752,
+      "ci_high": 0.1377780122078558,
+      "pair_weighted_ccd": 0.12141911600373632,
+      "pairs_per_person_median": 11.0,
+      "pairs_per_person_p25": 4.0,
+      "pairs_per_person_p75": 25.0,
+      "stays": 9205,
+      "people_with_multiple_eligible_stays": 184,
+      "primary_cohort_union_safeguard": true
+    }
+  },
+  "duplicate_timestamp_exclusion": {
+    "sicdb": {
+      "people": 1510,
+      "pairs": 30087,
+      "ccd_fraction": 0.1503449705988768,
+      "ci_low": 0.14005626456714373,
+      "ci_high": 0.16064217736141204,
+      "pair_weighted_ccd": 0.15747665104530195,
+      "pairs_per_person_median": 8.0,
+      "pairs_per_person_p25": 4.0,
+      "pairs_per_person_p75": 19.0
+    },
+    "mimic_iv": {
+      "people": 4171,
+      "pairs": 33855,
+      "ccd_fraction": 0.1320241478534691,
+      "ci_low": 0.12619009295498093,
+      "ci_high": 0.13818598043687835,
+      "pair_weighted_ccd": 0.130202333481022,
+      "pairs_per_person_median": 6.0,
+      "pairs_per_person_p25": 4.0,
+      "pairs_per_person_p75": 11.0
+    },
+    "eicu": {
+      "people": 9013,
+      "pairs": 170957,
+      "ccd_fraction": 0.13344730532577698,
+      "ci_low": 0.12957861833293843,
+      "ci_high": 0.13747774843263827,
+      "pair_weighted_ccd": 0.12069701737863907,
+      "pairs_per_person_median": 11.0,
+      "pairs_per_person_p25": 4.0,
+      "pairs_per_person_p75": 25.0
+    }
+  },
+  "at_least_two_distinct_hours": {
+    "sicdb": {
+      "people": 1249,
+      "pairs": 28587,
+      "ccd_fraction": 0.15353007869257956,
+      "ci_low": 0.14257692798116936,
+      "ci_high": 0.16421090076966216,
+      "pair_weighted_ccd": 0.15891838947773462,
+      "pairs_per_person_median": 10.0,
+      "pairs_per_person_p25": 6.0,
+      "pairs_per_person_p75": 22.0,
+      "hours_required": 2
+    },
+    "mimic_iv": {
+      "people": 4118,
+      "pairs": 33654,
+      "ccd_fraction": 0.13096242745322367,
+      "ci_low": 0.1251319018085396,
+      "ci_high": 0.13709476469493367,
+      "pair_weighted_ccd": 0.12967255006834255,
+      "pairs_per_person_median": 6.0,
+      "pairs_per_person_p25": 4.0,
+      "pairs_per_person_p75": 11.0,
+      "hours_required": 2
+    },
+    "eicu": {
+      "people": 8854,
+      "pairs": 170426,
+      "ccd_fraction": 0.13227427394325017,
+      "ci_low": 0.12837590354485467,
+      "ci_high": 0.13642378932113136,
+      "pair_weighted_ccd": 0.12045697252766596,
+      "pairs_per_person_median": 12.0,
+      "pairs_per_person_p25": 5.0,
+      "pairs_per_person_p75": 25.0,
+      "hours_required": 2
+    }
+  },
+  "sicdb_time_shift_falsification": [
+    {
+      "shift_minutes": -5,
+      "people": 242,
+      "pairs": 11405,
+      "estimate": 0.2275708684790896,
+      "ci_low": 0.19677888390348128,
+      "ci_high": 0.2613207822281558,
+      "pair_weighted": 0.17290661990355108
+    },
+    {
+      "shift_minutes": -1,
+      "people": 81,
+      "pairs": 9152,
+      "estimate": 0.19899886400575736,
+      "ci_low": 0.1442307949633973,
+      "ci_high": 0.2587331878497889,
+      "pair_weighted": 0.16083916083916083
+    },
+    {
+      "shift_minutes": 1,
+      "people": 81,
+      "pairs": 9152,
+      "estimate": 0.15741184201282035,
+      "ci_low": 0.11334580460888724,
+      "ci_high": 0.20713162489521092,
+      "pair_weighted": 0.15865384615384615
+    },
+    {
+      "shift_minutes": 5,
+      "people": 242,
+      "pairs": 11405,
+      "estimate": 0.20426505170961223,
+      "ci_low": 0.17244899581032014,
+      "ci_high": 0.23725512475890392,
+      "pair_weighted": 0.164138535729943
+    }
+  ],
+  "between_person_stratified_permutation": {
+    "sicdb": {
+      "people": 1510,
+      "pairs": 30087,
+      "estimate": 0.17267006077659663,
+      "ci_low": 0.1653944485560293,
+      "ci_high": 0.1800903540357238,
+      "pair_weighted": 0.16588559843121614
+    },
+    "mimic_iv": {
+      "people": 4171,
+      "pairs": 33855,
+      "estimate": 0.1398888378846696,
+      "ci_low": 0.13527827733819048,
+      "ci_high": 0.14449021830615133,
+      "pair_weighted": 0.13847289912863683
+    },
+    "eicu": {
+      "people": 9017,
+      "pairs": 171016,
+      "estimate": 0.13183898455362822,
+      "ci_low": 0.12877893638963164,
+      "ci_high": 0.13489785746832306,
+      "pair_weighted": 0.12665481592365627
+    }
+  },
+  "interpretation": "Sensitivity and falsification analyses; time shifts and permutations are not physiological null models."
+}

@@ -1,0 +1,1280 @@
+{
+  "generated_at_utc": "2026-08-13T00:54:46.691677+00:00",
+  "protocol_version": "2.0 pre-result restart",
+  "outcome": "subsequent hospital mortality after 24-hour ICU landmark",
+  "causal_claim": false,
+  "models": [
+    {
+      "source": "eicu",
+      "policy": "any_sensor",
+      "model": "age_sex",
+      "people": 7292,
+      "deaths": 1071,
+      "event_fraction": 0.14687328579264947,
+      "burden_mean": 0.31481959748585964,
+      "burden_p05": 0.0,
+      "burden_median": 0.22580645161290322,
+      "burden_p95": 1.0,
+      "mean_realized_increment_for_amrd": 0.09267948398447344,
+      "design_columns": 6,
+      "design_condition_number": 5.090656491834107,
+      "original_fit_converged": true,
+      "bootstrap_replicates": 2000,
+      "bootstrap_failures": 0,
+      "intervals": {
+        "risk_0.00": {
+          "estimate": 0.10894918625165793,
+          "ci_low": 0.09720350697941996,
+          "ci_high": 0.12136923619089135
+        },
+        "risk_0.10": {
+          "estimate": 0.12328573934220169,
+          "ci_low": 0.11312207750489382,
+          "ci_high": 0.1345757205757733
+        },
+        "risk_0.25": {
+          "estimate": 0.14042306606463942,
+          "ci_low": 0.12493386735525591,
+          "ci_high": 0.1568059328834061
+        },
+        "risk_0.50": {
+          "estimate": 0.15463778658177818,
+          "ci_low": 0.13850238525645578,
+          "ci_high": 0.17124878033593677
+        },
+        "average_marginal_risk_difference": {
+          "estimate": 0.01220402136630871,
+          "ci_low": 0.008268713979829768,
+          "ci_high": 0.016031532419583404
+        }
+      },
+      "performance": {
+        "brier": 0.1231972746149323,
+        "auroc": 0.5949433944933061,
+        "auprc": 0.20830331464605323,
+        "calibration_intercept": -7.793840164343405e-17,
+        "calibration_slope": 1.0
+      },
+      "interpretation": "Association under a measurement policy; not a causal effect or device-truth comparison."
+    },
+    {
+      "source": "eicu",
+      "policy": "any_sensor",
+      "model": "age_sex_severity",
+      "people": 6490,
+      "deaths": 961,
+      "event_fraction": 0.14807395993836672,
+      "burden_mean": 0.3137674206660903,
+      "burden_p05": 0.0,
+      "burden_median": 0.2222222222222222,
+      "burden_p95": 1.0,
+      "mean_realized_increment_for_amrd": 0.09265682803783955,
+      "design_columns": 7,
+      "design_condition_number": 5.134602240075496,
+      "original_fit_converged": true,
+      "bootstrap_replicates": 2000,
+      "bootstrap_failures": 0,
+      "intervals": {
+        "risk_0.00": {
+          "estimate": 0.15187389025135586,
+          "ci_low": 0.13669619978579223,
+          "ci_high": 0.16761348294553333
+        },
+        "risk_0.10": {
+          "estimate": 0.1383696684514836,
+          "ci_low": 0.12686557565659215,
+          "ci_high": 0.14996364306577264
+        },
+        "risk_0.25": {
+          "estimate": 0.12741293263367798,
+          "ci_low": 0.11218553813794624,
+          "ci_high": 0.14289267931011135
+        },
+        "risk_0.50": {
+          "estimate": 0.13645230927211496,
+          "ci_low": 0.122720960518526,
+          "ci_high": 0.14999389690910014
+        },
+        "average_marginal_risk_difference": {
+          "estimate": -0.0006387554644089531,
+          "ci_low": -0.004572758197650564,
+          "ci_high": 0.003060009156862537
+        }
+      },
+      "performance": {
+        "brier": 0.09722379689633748,
+        "auroc": 0.8293223188526903,
+        "auprc": 0.494224247705082,
+        "calibration_intercept": -2.320243602144165e-16,
+        "calibration_slope": 1.0
+      },
+      "interpretation": "Association under a measurement policy; not a causal effect or device-truth comparison."
+    },
+    {
+      "source": "eicu",
+      "policy": "arterial_only",
+      "model": "age_sex",
+      "people": 7292,
+      "deaths": 1071,
+      "event_fraction": 0.14687328579264947,
+      "burden_mean": 0.2105360141990851,
+      "burden_p05": 0.0,
+      "burden_median": 0.06666666666666667,
+      "burden_p95": 0.8571428571428571,
+      "mean_realized_increment_for_amrd": 0.09581401841733839,
+      "design_columns": 6,
+      "design_condition_number": 6.596615334920166,
+      "original_fit_converged": true,
+      "bootstrap_replicates": 2000,
+      "bootstrap_failures": 0,
+      "intervals": {
+        "risk_0.00": {
+          "estimate": 0.11362878876273977,
+          "ci_low": 0.10357533381944667,
+          "ci_high": 0.12407674146331198
+        },
+        "risk_0.10": {
+          "estimate": 0.13933166853252113,
+          "ci_low": 0.12683381933934218,
+          "ci_high": 0.15178127080119094
+        },
+        "risk_0.25": {
+          "estimate": 0.15965820089374846,
+          "ci_low": 0.14196181899749633,
+          "ci_high": 0.1763426382902205
+        },
+        "risk_0.50": {
+          "estimate": 0.16212379030008328,
+          "ci_low": 0.14098659376082834,
+          "ci_high": 0.1830848989618185
+        },
+        "average_marginal_risk_difference": {
+          "estimate": 0.018293938623108755,
+          "ci_low": 0.011974256912380816,
+          "ci_high": 0.0240044568199934
+        }
+      },
+      "performance": {
+        "brier": 0.12281288827574913,
+        "auroc": 0.5964777595118849,
+        "auprc": 0.21496940774501644,
+        "calibration_intercept": 8.762152064805664e-16,
+        "calibration_slope": 1.0000000000000004
+      },
+      "interpretation": "Association under a measurement policy; not a causal effect or device-truth comparison."
+    },
+    {
+      "source": "eicu",
+      "policy": "arterial_only",
+      "model": "age_sex_severity",
+      "people": 6490,
+      "deaths": 961,
+      "event_fraction": 0.14807395993836672,
+      "burden_mean": 0.21147718794155712,
+      "burden_p05": 0.0,
+      "burden_median": 0.06451612903225806,
+      "burden_p95": 0.8636363636363636,
+      "mean_realized_increment_for_amrd": 0.09570757636749862,
+      "design_columns": 7,
+      "design_condition_number": 6.609644491288983,
+      "original_fit_converged": true,
+      "bootstrap_replicates": 2000,
+      "bootstrap_failures": 0,
+      "intervals": {
+        "risk_0.00": {
+          "estimate": 0.14992068943308207,
+          "ci_low": 0.13707223649186281,
+          "ci_high": 0.16236076566952012
+        },
+        "risk_0.10": {
+          "estimate": 0.13933863835006685,
+          "ci_low": 0.12694839284773937,
+          "ci_high": 0.15155163318382167
+        },
+        "risk_0.25": {
+          "estimate": 0.13085109693765898,
+          "ci_low": 0.11542121926833018,
+          "ci_high": 0.14494643353333597
+        },
+        "risk_0.50": {
+          "estimate": 0.1380632861216008,
+          "ci_low": 0.12086448537020038,
+          "ci_high": 0.1548039995719526
+        },
+        "average_marginal_risk_difference": {
+          "estimate": -0.002209393782692921,
+          "ci_low": -0.0073638893235471676,
+          "ci_high": 0.0030473416205805868
+        }
+      },
+      "performance": {
+        "brier": 0.09713922299120209,
+        "auroc": 0.8281343719963736,
+        "auprc": 0.49647385017375084,
+        "calibration_intercept": -6.762405372798507e-13,
+        "calibration_slope": 0.9999999999986017
+      },
+      "interpretation": "Association under a measurement policy; not a causal effect or device-truth comparison."
+    },
+    {
+      "source": "eicu",
+      "policy": "concordant_only",
+      "model": "age_sex",
+      "people": 6741,
+      "deaths": 973,
+      "event_fraction": 0.14434060228452752,
+      "burden_mean": 0.1914136379474356,
+      "burden_p05": 0.0,
+      "burden_median": 0.0,
+      "burden_p95": 1.0,
+      "mean_realized_increment_for_amrd": 0.0918453664866665,
+      "design_columns": 6,
+      "design_condition_number": 5.096400768853022,
+      "original_fit_converged": true,
+      "bootstrap_replicates": 2000,
+      "bootstrap_failures": 0,
+      "intervals": {
+        "risk_0.00": {
+          "estimate": 0.12440679555188167,
+          "ci_low": 0.11440364313614362,
+          "ci_high": 0.13497589592614206
+        },
+        "risk_0.10": {
+          "estimate": 0.1409017509851266,
+          "ci_low": 0.1228770943078788,
+          "ci_high": 0.1582813051573486
+        },
+        "risk_0.25": {
+          "estimate": 0.1570730859279184,
+          "ci_low": 0.13264116281914817,
+          "ci_high": 0.18080740931150535
+        },
+        "risk_0.50": {
+          "estimate": 0.16742654156949807,
+          "ci_low": 0.1428995356318215,
+          "ci_high": 0.19265341803126276
+        },
+        "average_marginal_risk_difference": {
+          "estimate": 0.01272623687413449,
+          "ci_low": 0.002301310668046482,
+          "ci_high": 0.02304743590983435
+        }
+      },
+      "performance": {
+        "brier": 0.1222233951714246,
+        "auroc": 0.5756393498238856,
+        "auprc": 0.19438299953060142,
+        "calibration_intercept": -1.168413757256485e-15,
+        "calibration_slope": 0.9999999999999992
+      },
+      "interpretation": "Association under a measurement policy; not a causal effect or device-truth comparison."
+    },
+    {
+      "source": "eicu",
+      "policy": "concordant_only",
+      "model": "age_sex_severity",
+      "people": 5990,
+      "deaths": 872,
+      "event_fraction": 0.14557595993322203,
+      "burden_mean": 0.1895236934406782,
+      "burden_p05": 0.0,
+      "burden_median": 0.0,
+      "burden_p95": 1.0,
+      "mean_realized_increment_for_amrd": 0.09188740293493561,
+      "design_columns": 7,
+      "design_condition_number": 5.139017219016407,
+      "original_fit_converged": true,
+      "bootstrap_replicates": 2000,
+      "bootstrap_failures": 0,
+      "intervals": {
+        "risk_0.00": {
+          "estimate": 0.14406327475067768,
+          "ci_low": 0.13299461810704583,
+          "ci_high": 0.15526622459640077
+        },
+        "risk_0.10": {
+          "estimate": 0.13559811803961674,
+          "ci_low": 0.11918780686025549,
+          "ci_high": 0.1522596315175111
+        },
+        "risk_0.25": {
+          "estimate": 0.13160850082015407,
+          "ci_low": 0.11086014544063838,
+          "ci_high": 0.15277606046828027
+        },
+        "risk_0.50": {
+          "estimate": 0.14250201579079028,
+          "ci_low": 0.12191561457517952,
+          "ci_high": 0.16506151740248337
+        },
+        "average_marginal_risk_difference": {
+          "estimate": -0.0037447719807476828,
+          "ci_low": -0.012822426434035023,
+          "ci_high": 0.005542854134172143
+        }
+      },
+      "performance": {
+        "brier": 0.09626297483910537,
+        "auroc": 0.8273165003172828,
+        "auprc": 0.488680424013584,
+        "calibration_intercept": -4.354421803123907e-12,
+        "calibration_slope": 0.9999999999915957
+      },
+      "interpretation": "Association under a measurement policy; not a causal effect or device-truth comparison."
+    },
+    {
+      "source": "eicu",
+      "policy": "cuff_only",
+      "model": "age_sex",
+      "people": 7292,
+      "deaths": 1071,
+      "event_fraction": 0.14687328579264947,
+      "burden_mean": 0.2214343422995135,
+      "burden_p05": 0.0,
+      "burden_median": 0.08771929824561403,
+      "burden_p95": 0.8241911764705879,
+      "mean_realized_increment_for_amrd": 0.09646369946856508,
+      "design_columns": 6,
+      "design_condition_number": 7.004327916375715,
+      "original_fit_converged": true,
+      "bootstrap_replicates": 2000,
+      "bootstrap_failures": 0,
+      "intervals": {
+        "risk_0.00": {
+          "estimate": 0.11993705457070535,
+          "ci_low": 0.10843854838539338,
+          "ci_high": 0.1312524763305647
+        },
+        "risk_0.10": {
+          "estimate": 0.13447842475958352,
+          "ci_low": 0.12270702222621135,
+          "ci_high": 0.14632649639517195
+        },
+        "risk_0.25": {
+          "estimate": 0.1555565121859227,
+          "ci_low": 0.1380550501595176,
+          "ci_high": 0.17298079267248193
+        },
+        "risk_0.50": {
+          "estimate": 0.183222635897162,
+          "ci_low": 0.16254588631463118,
+          "ci_high": 0.20560970261237033
+        },
+        "average_marginal_risk_difference": {
+          "estimate": 0.012081971814289362,
+          "ci_low": 0.006353489034287953,
+          "ci_high": 0.018056624713500738
+        }
+      },
+      "performance": {
+        "brier": 0.12408132172833236,
+        "auroc": 0.5777131942633991,
+        "auprc": 0.18798081137260142,
+        "calibration_intercept": -5.309917601755518e-16,
+        "calibration_slope": 0.9999999999999997
+      },
+      "interpretation": "Association under a measurement policy; not a causal effect or device-truth comparison."
+    },
+    {
+      "source": "eicu",
+      "policy": "cuff_only",
+      "model": "age_sex_severity",
+      "people": 6490,
+      "deaths": 961,
+      "event_fraction": 0.14807395993836672,
+      "burden_mean": 0.21905310358445204,
+      "burden_p05": 0.0,
+      "burden_median": 0.08333333333333333,
+      "burden_p95": 0.8181818181818182,
+      "mean_realized_increment_for_amrd": 0.09650856847458757,
+      "design_columns": 7,
+      "design_condition_number": 7.065030256558775,
+      "original_fit_converged": true,
+      "bootstrap_replicates": 2000,
+      "bootstrap_failures": 0,
+      "intervals": {
+        "risk_0.00": {
+          "estimate": 0.14267087221035543,
+          "ci_low": 0.13097027516071894,
+          "ci_high": 0.1549689143547825
+        },
+        "risk_0.10": {
+          "estimate": 0.13775245835838512,
+          "ci_low": 0.1256561631998316,
+          "ci_high": 0.14996526028249785
+        },
+        "risk_0.25": {
+          "estimate": 0.1394079583425396,
+          "ci_low": 0.12455130251745476,
+          "ci_high": 0.15531542049820096
+        },
+        "risk_0.50": {
+          "estimate": 0.1589056488367448,
+          "ci_low": 0.14159387220447145,
+          "ci_high": 0.1781906489284324
+        },
+        "average_marginal_risk_difference": {
+          "estimate": 0.0006625258718669256,
+          "ci_low": -0.004799917186216751,
+          "ci_high": 0.00589339899086579
+        }
+      },
+      "performance": {
+        "brier": 0.09753144735052677,
+        "auroc": 0.8268105414850728,
+        "auprc": 0.4929279330799575,
+        "calibration_intercept": 1.5275380452607453e-16,
+        "calibration_slope": 1.0000000000000002
+      },
+      "interpretation": "Association under a measurement policy; not a causal effect or device-truth comparison."
+    },
+    {
+      "source": "mimic_iv",
+      "policy": "any_sensor",
+      "model": "age_sex",
+      "people": 3782,
+      "deaths": 483,
+      "event_fraction": 0.1277102062400846,
+      "burden_mean": 0.3371227684193875,
+      "burden_p05": 0.0,
+      "burden_median": 0.25,
+      "burden_p95": 1.0,
+      "mean_realized_increment_for_amrd": 0.09130421059329463,
+      "design_columns": 6,
+      "design_condition_number": 4.84232847761809,
+      "original_fit_converged": true,
+      "bootstrap_replicates": 2000,
+      "bootstrap_failures": 0,
+      "intervals": {
+        "risk_0.00": {
+          "estimate": 0.10584638518100388,
+          "ci_low": 0.08914000198171165,
+          "ci_high": 0.12386384776739678
+        },
+        "risk_0.10": {
+          "estimate": 0.11399797952932211,
+          "ci_low": 0.10025887259555906,
+          "ci_high": 0.1283569664883286
+        },
+        "risk_0.25": {
+          "estimate": 0.12454432025759332,
+          "ci_low": 0.1045528757750365,
+          "ci_high": 0.14603932320138346
+        },
+        "risk_0.50": {
+          "estimate": 0.13120437714186287,
+          "ci_low": 0.11155812063434484,
+          "ci_high": 0.15137377492856055
+        },
+        "average_marginal_risk_difference": {
+          "estimate": 0.006271760133775249,
+          "ci_low": 0.0017874265087942341,
+          "ci_high": 0.010619866510568782
+        }
+      },
+      "performance": {
+        "brier": 0.10934266714845273,
+        "auroc": 0.6154644390012157,
+        "auprc": 0.18372907719772924,
+        "calibration_intercept": 1.1320209798649763e-11,
+        "calibration_slope": 1.000000000008384
+      },
+      "interpretation": "Association under a measurement policy; not a causal effect or device-truth comparison."
+    },
+    {
+      "source": "mimic_iv",
+      "policy": "any_sensor",
+      "model": "age_sex_severity",
+      "people": 3782,
+      "deaths": 483,
+      "event_fraction": 0.1277102062400846,
+      "burden_mean": 0.3371227684193875,
+      "burden_p05": 0.0,
+      "burden_median": 0.25,
+      "burden_p95": 1.0,
+      "mean_realized_increment_for_amrd": 0.09130421059329463,
+      "design_columns": 7,
+      "design_condition_number": 4.88083955266731,
+      "original_fit_converged": true,
+      "bootstrap_replicates": 2000,
+      "bootstrap_failures": 0,
+      "intervals": {
+        "risk_0.00": {
+          "estimate": 0.13619894992778267,
+          "ci_low": 0.11770469993264669,
+          "ci_high": 0.15675206568244007
+        },
+        "risk_0.10": {
+          "estimate": 0.13131279530311468,
+          "ci_low": 0.11660601324815284,
+          "ci_high": 0.14666907908870308
+        },
+        "risk_0.25": {
+          "estimate": 0.12491160968489841,
+          "ci_low": 0.10628169860026744,
+          "ci_high": 0.1441213029467327
+        },
+        "risk_0.50": {
+          "estimate": 0.1188956647257036,
+          "ci_low": 0.1026027932646104,
+          "ci_high": 0.13589093464597252
+        },
+        "average_marginal_risk_difference": {
+          "estimate": -0.001547741338638758,
+          "ci_low": -0.00569082437204295,
+          "ci_high": 0.0022106697049001263
+        }
+      },
+      "performance": {
+        "brier": 0.09148234128561936,
+        "auroc": 0.8150308425227043,
+        "auprc": 0.416896245736239,
+        "calibration_intercept": -3.5812715854551787e-16,
+        "calibration_slope": 0.9999999999999999
+      },
+      "interpretation": "Association under a measurement policy; not a causal effect or device-truth comparison."
+    },
+    {
+      "source": "mimic_iv",
+      "policy": "arterial_only",
+      "model": "age_sex",
+      "people": 3782,
+      "deaths": 483,
+      "event_fraction": 0.1277102062400846,
+      "burden_mean": 0.18814063536827325,
+      "burden_p05": 0.0,
+      "burden_median": 0.0,
+      "burden_p95": 0.8,
+      "mean_realized_increment_for_amrd": 0.09657068405085328,
+      "design_columns": 6,
+      "design_condition_number": 7.5410195476178545,
+      "original_fit_converged": true,
+      "bootstrap_replicates": 2000,
+      "bootstrap_failures": 0,
+      "intervals": {
+        "risk_0.00": {
+          "estimate": 0.109786921128386,
+          "ci_low": 0.0960839257194222,
+          "ci_high": 0.12442702272078787
+        },
+        "risk_0.10": {
+          "estimate": 0.12654060454268526,
+          "ci_low": 0.11213431208519903,
+          "ci_high": 0.14189088940933448
+        },
+        "risk_0.25": {
+          "estimate": 0.14434350705580493,
+          "ci_low": 0.1219524092493158,
+          "ci_high": 0.16894654337725254
+        },
+        "risk_0.50": {
+          "estimate": 0.14387517124388516,
+          "ci_low": 0.1175243154224059,
+          "ci_high": 0.17213225514722122
+        },
+        "average_marginal_risk_difference": {
+          "estimate": 0.011019211092983245,
+          "ci_low": 0.003608160200164469,
+          "ci_high": 0.01831045839280655
+        }
+      },
+      "performance": {
+        "brier": 0.10937689446007316,
+        "auroc": 0.6147169887104255,
+        "auprc": 0.18476207095606534,
+        "calibration_intercept": -5.9692571854066066e-12,
+        "calibration_slope": 0.9999999999961606
+      },
+      "interpretation": "Association under a measurement policy; not a causal effect or device-truth comparison."
+    },
+    {
+      "source": "mimic_iv",
+      "policy": "arterial_only",
+      "model": "age_sex_severity",
+      "people": 3782,
+      "deaths": 483,
+      "event_fraction": 0.1277102062400846,
+      "burden_mean": 0.18814063536827325,
+      "burden_p05": 0.0,
+      "burden_median": 0.0,
+      "burden_p95": 0.8,
+      "mean_realized_increment_for_amrd": 0.09657068405085328,
+      "design_columns": 7,
+      "design_condition_number": 7.5824482112872635,
+      "original_fit_converged": true,
+      "bootstrap_replicates": 2000,
+      "bootstrap_failures": 0,
+      "intervals": {
+        "risk_0.00": {
+          "estimate": 0.1310533195039362,
+          "ci_low": 0.11665238239380243,
+          "ci_high": 0.14659880905871858
+        },
+        "risk_0.10": {
+          "estimate": 0.1294699714593064,
+          "ci_low": 0.11602187437630852,
+          "ci_high": 0.14427176942909817
+        },
+        "risk_0.25": {
+          "estimate": 0.12567899871866442,
+          "ci_low": 0.10667532145070953,
+          "ci_high": 0.14590153316217444
+        },
+        "risk_0.50": {
+          "estimate": 0.11819231613585057,
+          "ci_low": 0.0973728296497473,
+          "ci_high": 0.13915031446658147
+        },
+        "average_marginal_risk_difference": {
+          "estimate": -0.0013135650830989746,
+          "ci_low": -0.008221441905335275,
+          "ci_high": 0.00484633243891466
+        }
+      },
+      "performance": {
+        "brier": 0.09148331672978191,
+        "auroc": 0.814591848838063,
+        "auprc": 0.41643929355934395,
+        "calibration_intercept": 7.21021913713007e-17,
+        "calibration_slope": 1.0000000000000002
+      },
+      "interpretation": "Association under a measurement policy; not a causal effect or device-truth comparison."
+    },
+    {
+      "source": "mimic_iv",
+      "policy": "concordant_only",
+      "model": "age_sex",
+      "people": 3404,
+      "deaths": 433,
+      "event_fraction": 0.12720329024676852,
+      "burden_mean": 0.21151776268590444,
+      "burden_p05": 0.0,
+      "burden_median": 0.0,
+      "burden_p95": 1.0,
+      "mean_realized_increment_for_amrd": 0.08979282077108165,
+      "design_columns": 6,
+      "design_condition_number": 5.398444120747282,
+      "original_fit_converged": true,
+      "bootstrap_replicates": 2000,
+      "bootstrap_failures": 0,
+      "intervals": {
+        "risk_0.00": {
+          "estimate": 0.1134903499612776,
+          "ci_low": 0.10002328928730651,
+          "ci_high": 0.1268928106358244
+        },
+        "risk_0.10": {
+          "estimate": 0.12630971434959767,
+          "ci_low": 0.10813284432145533,
+          "ci_high": 0.1447538909052301
+        },
+        "risk_0.25": {
+          "estimate": 0.1405608764696909,
+          "ci_low": 0.10797204417011888,
+          "ci_high": 0.17642295271892208
+        },
+        "risk_0.50": {
+          "estimate": 0.13505133242322204,
+          "ci_low": 0.10619482858818927,
+          "ci_high": 0.16482076054726527
+        },
+        "average_marginal_risk_difference": {
+          "estimate": 0.008747387237936497,
+          "ci_low": -0.0017594702716516154,
+          "ci_high": 0.018665900519638436
+        }
+      },
+      "performance": {
+        "brier": 0.10882404341317238,
+        "auroc": 0.6178287728255352,
+        "auprc": 0.18741999429229872,
+        "calibration_intercept": 3.974655810268781e-16,
+        "calibration_slope": 1.0000000000000002
+      },
+      "interpretation": "Association under a measurement policy; not a causal effect or device-truth comparison."
+    },
+    {
+      "source": "mimic_iv",
+      "policy": "concordant_only",
+      "model": "age_sex_severity",
+      "people": 3404,
+      "deaths": 433,
+      "event_fraction": 0.12720329024676852,
+      "burden_mean": 0.21151776268590444,
+      "burden_p05": 0.0,
+      "burden_median": 0.0,
+      "burden_p95": 1.0,
+      "mean_realized_increment_for_amrd": 0.08979282077108165,
+      "design_columns": 7,
+      "design_condition_number": 5.410271988632635,
+      "original_fit_converged": true,
+      "bootstrap_replicates": 2000,
+      "bootstrap_failures": 0,
+      "intervals": {
+        "risk_0.00": {
+          "estimate": 0.12826300162063572,
+          "ci_low": 0.11363885806576289,
+          "ci_high": 0.1432247903355767
+        },
+        "risk_0.10": {
+          "estimate": 0.12718247508912633,
+          "ci_low": 0.10943397892443245,
+          "ci_high": 0.14608039104270637
+        },
+        "risk_0.25": {
+          "estimate": 0.12384761483103922,
+          "ci_low": 0.09482441433175573,
+          "ci_high": 0.15583877513088776
+        },
+        "risk_0.50": {
+          "estimate": 0.11313939644816373,
+          "ci_low": 0.08981172542770835,
+          "ci_high": 0.13559563303120048
+        },
+        "average_marginal_risk_difference": {
+          "estimate": -0.0007101687967325993,
+          "ci_low": -0.009887819383361265,
+          "ci_high": 0.008244097237256515
+        }
+      },
+      "performance": {
+        "brier": 0.09083045130449802,
+        "auroc": 0.8190654385775351,
+        "auprc": 0.4184304491305494,
+        "calibration_intercept": 1.0142564229320894e-16,
+        "calibration_slope": 0.9999999999999999
+      },
+      "interpretation": "Association under a measurement policy; not a causal effect or device-truth comparison."
+    },
+    {
+      "source": "mimic_iv",
+      "policy": "cuff_only",
+      "model": "age_sex",
+      "people": 3782,
+      "deaths": 483,
+      "event_fraction": 0.1277102062400846,
+      "burden_mean": 0.27159466808365873,
+      "burden_p05": 0.0,
+      "burden_median": 0.15384615384615385,
+      "burden_p95": 1.0,
+      "mean_realized_increment_for_amrd": 0.09411792180298034,
+      "design_columns": 6,
+      "design_condition_number": 5.827492050055735,
+      "original_fit_converged": true,
+      "bootstrap_replicates": 2000,
+      "bootstrap_failures": 0,
+      "intervals": {
+        "risk_0.00": {
+          "estimate": 0.10296524529417725,
+          "ci_low": 0.08838708704700722,
+          "ci_high": 0.11783615741797585
+        },
+        "risk_0.10": {
+          "estimate": 0.12205275570668801,
+          "ci_low": 0.10784246907768984,
+          "ci_high": 0.13635347121852076
+        },
+        "risk_0.25": {
+          "estimate": 0.14564740037335627,
+          "ci_low": 0.12254048598335293,
+          "ci_high": 0.16929975439863998
+        },
+        "risk_0.50": {
+          "estimate": 0.14237439183382739,
+          "ci_low": 0.12090541842764457,
+          "ci_high": 0.16624240938229523
+        },
+        "average_marginal_risk_difference": {
+          "estimate": 0.010146140763697091,
+          "ci_low": 0.0049316984998166394,
+          "ci_high": 0.01497917738592013
+        }
+      },
+      "performance": {
+        "brier": 0.1092579513661546,
+        "auroc": 0.6153401777438048,
+        "auprc": 0.18964520396697612,
+        "calibration_intercept": 1.2166624758897458e-16,
+        "calibration_slope": 1.0
+      },
+      "interpretation": "Association under a measurement policy; not a causal effect or device-truth comparison."
+    },
+    {
+      "source": "mimic_iv",
+      "policy": "cuff_only",
+      "model": "age_sex_severity",
+      "people": 3782,
+      "deaths": 483,
+      "event_fraction": 0.1277102062400846,
+      "burden_mean": 0.27159466808365873,
+      "burden_p05": 0.0,
+      "burden_median": 0.15384615384615385,
+      "burden_p95": 1.0,
+      "mean_realized_increment_for_amrd": 0.09411792180298034,
+      "design_columns": 7,
+      "design_condition_number": 5.859779486277666,
+      "original_fit_converged": true,
+      "bootstrap_replicates": 2000,
+      "bootstrap_failures": 0,
+      "intervals": {
+        "risk_0.00": {
+          "estimate": 0.1256478284382379,
+          "ci_low": 0.10908131184231616,
+          "ci_high": 0.1422060531101072
+        },
+        "risk_0.10": {
+          "estimate": 0.13053900653475367,
+          "ci_low": 0.11641888453372472,
+          "ci_high": 0.14432099349654606
+        },
+        "risk_0.25": {
+          "estimate": 0.1346257798744483,
+          "ci_low": 0.11489793452105389,
+          "ci_high": 0.15534611543018498
+        },
+        "risk_0.50": {
+          "estimate": 0.12660829242484853,
+          "ci_low": 0.10888181453452378,
+          "ci_high": 0.14609263647427626
+        },
+        "average_marginal_risk_difference": {
+          "estimate": 0.0012835733818335846,
+          "ci_low": -0.003295631939287814,
+          "ci_high": 0.005903047583021536
+        }
+      },
+      "performance": {
+        "brier": 0.09145873163110003,
+        "auroc": 0.814300650739888,
+        "auprc": 0.4178651092666474,
+        "calibration_intercept": -1.6179489144956635e-16,
+        "calibration_slope": 1.0
+      },
+      "interpretation": "Association under a measurement policy; not a causal effect or device-truth comparison."
+    },
+    {
+      "source": "sicdb",
+      "policy": "any_sensor",
+      "model": "age_sex",
+      "people": 1208,
+      "deaths": 111,
+      "event_fraction": 0.09188741721854304,
+      "burden_mean": 0.5086043287039743,
+      "burden_p05": 0.0,
+      "burden_median": 0.5,
+      "burden_p95": 1.0,
+      "mean_realized_increment_for_amrd": 0.07963208232091452,
+      "design_columns": 6,
+      "design_condition_number": 3.377331170148897,
+      "original_fit_converged": true,
+      "bootstrap_replicates": 2000,
+      "bootstrap_failures": 0,
+      "intervals": {
+        "risk_0.00": {
+          "estimate": 0.053733883907707655,
+          "ci_low": 0.02789028673438994,
+          "ci_high": 0.08394971806436358
+        },
+        "risk_0.10": {
+          "estimate": 0.07570225784108166,
+          "ci_low": 0.05072019002234313,
+          "ci_high": 0.10157068439457763
+        },
+        "risk_0.25": {
+          "estimate": 0.10825255347408755,
+          "ci_low": 0.07176574562170794,
+          "ci_high": 0.1511015244920477
+        },
+        "risk_0.50": {
+          "estimate": 0.09875457438072971,
+          "ci_low": 0.06864141242052563,
+          "ci_high": 0.13249662710574822
+        },
+        "average_marginal_risk_difference": {
+          "estimate": 0.007090433842913028,
+          "ci_low": 0.002240877633641435,
+          "ci_high": 0.011326583424422628
+        }
+      },
+      "performance": {
+        "brier": 0.08168510679454181,
+        "auroc": 0.6380135833189616,
+        "auprc": 0.152166272997322,
+        "calibration_intercept": 1.910058220723651e-16,
+        "calibration_slope": 1.0000000000000002
+      },
+      "interpretation": "Association under a measurement policy; not a causal effect or device-truth comparison."
+    },
+    {
+      "source": "sicdb",
+      "policy": "any_sensor",
+      "model": "age_sex_severity",
+      "people": 1208,
+      "deaths": 111,
+      "event_fraction": 0.09188741721854304,
+      "burden_mean": 0.5086043287039743,
+      "burden_p05": 0.0,
+      "burden_median": 0.5,
+      "burden_p95": 1.0,
+      "mean_realized_increment_for_amrd": 0.07963208232091452,
+      "design_columns": 7,
+      "design_condition_number": 3.4923495317699462,
+      "original_fit_converged": true,
+      "bootstrap_replicates": 2000,
+      "bootstrap_failures": 0,
+      "intervals": {
+        "risk_0.00": {
+          "estimate": 0.06448464623318012,
+          "ci_low": 0.035091676621365524,
+          "ci_high": 0.09730102728791457
+        },
+        "risk_0.10": {
+          "estimate": 0.08318673552235406,
+          "ci_low": 0.057121384172622656,
+          "ci_high": 0.11190249332105276
+        },
+        "risk_0.25": {
+          "estimate": 0.10760226682620037,
+          "ci_low": 0.07086601629887113,
+          "ci_high": 0.145535243468137
+        },
+        "risk_0.50": {
+          "estimate": 0.09755785369012335,
+          "ci_low": 0.06860945829924199,
+          "ci_high": 0.1278629695727244
+        },
+        "average_marginal_risk_difference": {
+          "estimate": 0.0042755578874681096,
+          "ci_low": 4.464350087046937e-05,
+          "ci_high": 0.007836740250186401
+        }
+      },
+      "performance": {
+        "brier": 0.06874924354074081,
+        "auroc": 0.8282005797958396,
+        "auprc": 0.38774428792929677,
+        "calibration_intercept": 3.5334763406837474e-16,
+        "calibration_slope": 1.0000000000000002
+      },
+      "interpretation": "Association under a measurement policy; not a causal effect or device-truth comparison."
+    },
+    {
+      "source": "sicdb",
+      "policy": "arterial_only",
+      "model": "age_sex",
+      "people": 1208,
+      "deaths": 111,
+      "event_fraction": 0.09188741721854304,
+      "burden_mean": 0.38657043897779964,
+      "burden_p05": 0.0,
+      "burden_median": 0.3333333333333333,
+      "burden_p95": 1.0,
+      "mean_realized_increment_for_amrd": 0.08906746723749136,
+      "design_columns": 6,
+      "design_condition_number": 3.9411994714212506,
+      "original_fit_converged": true,
+      "bootstrap_replicates": 2000,
+      "bootstrap_failures": 0,
+      "intervals": {
+        "risk_0.00": {
+          "estimate": 0.0719994450083816,
+          "ci_low": 0.04684701457192089,
+          "ci_high": 0.09983611092718812
+        },
+        "risk_0.10": {
+          "estimate": 0.07811056751048474,
+          "ci_low": 0.056746683459602335,
+          "ci_high": 0.10138584990427242
+        },
+        "risk_0.25": {
+          "estimate": 0.08513577860051703,
+          "ci_low": 0.055267092422102405,
+          "ci_high": 0.12089227004933668
+        },
+        "risk_0.50": {
+          "estimate": 0.08814933416678071,
+          "ci_low": 0.060773245402016104,
+          "ci_high": 0.11755355105950538
+        },
+        "average_marginal_risk_difference": {
+          "estimate": 0.005469134991513756,
+          "ci_low": -0.0011625787132272711,
+          "ci_high": 0.011755281969312317
+        }
+      },
+      "performance": {
+        "brier": 0.08181838674639579,
+        "auroc": 0.6308195159608103,
+        "auprc": 0.1465810988628149,
+        "calibration_intercept": -2.2174471271360053e-16,
+        "calibration_slope": 0.9999999999999999
+      },
+      "interpretation": "Association under a measurement policy; not a causal effect or device-truth comparison."
+    },
+    {
+      "source": "sicdb",
+      "policy": "arterial_only",
+      "model": "age_sex_severity",
+      "people": 1208,
+      "deaths": 111,
+      "event_fraction": 0.09188741721854304,
+      "burden_mean": 0.38657043897779964,
+      "burden_p05": 0.0,
+      "burden_median": 0.3333333333333333,
+      "burden_p95": 1.0,
+      "mean_realized_increment_for_amrd": 0.08906746723749136,
+      "design_columns": 7,
+      "design_condition_number": 4.080262733410583,
+      "original_fit_converged": true,
+      "bootstrap_replicates": 2000,
+      "bootstrap_failures": 0,
+      "intervals": {
+        "risk_0.00": {
+          "estimate": 0.083483078693797,
+          "ci_low": 0.05650755648549542,
+          "ci_high": 0.11346220396412023
+        },
+        "risk_0.10": {
+          "estimate": 0.08104826912294912,
+          "ci_low": 0.05997358363561633,
+          "ci_high": 0.10385386527245459
+        },
+        "risk_0.25": {
+          "estimate": 0.08037881827091502,
+          "ci_low": 0.0542775867794641,
+          "ci_high": 0.11031407352226236
+        },
+        "risk_0.50": {
+          "estimate": 0.09095689947930083,
+          "ci_low": 0.06510417434476479,
+          "ci_high": 0.11970977977520682
+        },
+        "average_marginal_risk_difference": {
+          "estimate": 0.0015274448296580853,
+          "ci_low": -0.004930299128804294,
+          "ci_high": 0.006577398495341815
+        }
+      },
+      "performance": {
+        "brier": 0.06924849684267592,
+        "auroc": 0.829461184064648,
+        "auprc": 0.3775820537264557,
+        "calibration_intercept": -3.5354545413721604e-10,
+        "calibration_slope": 0.9999999995824509
+      },
+      "interpretation": "Association under a measurement policy; not a causal effect or device-truth comparison."
+    },
+    {
+      "source": "sicdb",
+      "policy": "concordant_only",
+      "model": "age_sex",
+      "people": 1118,
+      "deaths": 103,
+      "event_fraction": 0.09212880143112702,
+      "burden_mean": 0.4110486420623696,
+      "burden_p05": 0.0,
+      "burden_median": 0.3,
+      "burden_p95": 1.0,
+      "mean_realized_increment_for_amrd": 0.0769498719977866,
+      "design_columns": 6,
+      "design_condition_number": 4.0049597726567,
+      "original_fit_converged": true,
+      "bootstrap_replicates": 2000,
+      "bootstrap_failures": 0,
+      "intervals": {
+        "risk_0.00": {
+          "estimate": 0.06542686587120211,
+          "ci_low": 0.04301662070700611,
+          "ci_high": 0.08940508646965127
+        },
+        "risk_0.10": {
+          "estimate": 0.10559113288400572,
+          "ci_low": 0.07250890523716001,
+          "ci_high": 0.13974391624803725
+        },
+        "risk_0.25": {
+          "estimate": 0.1440737417303939,
+          "ci_low": 0.08337610327889419,
+          "ci_high": 0.20798370215732492
+        },
+        "risk_0.50": {
+          "estimate": 0.08074093916134549,
+          "ci_low": 0.04799989880070628,
+          "ci_high": 0.11658258876857876
+        },
+        "average_marginal_risk_difference": {
+          "estimate": 0.01537577843382026,
+          "ci_low": 0.00488616313098348,
+          "ci_high": 0.02505225482565591
+        }
+      },
+      "performance": {
+        "brier": 0.08153796540893278,
+        "auroc": 0.6514515280501219,
+        "auprc": 0.15629273882937234,
+        "calibration_intercept": 1.9903372313753857e-16,
+        "calibration_slope": 1.0000000000000002
+      },
+      "interpretation": "Association under a measurement policy; not a causal effect or device-truth comparison."
+    },
+    {
+      "source": "sicdb",
+      "policy": "concordant_only",
+      "model": "age_sex_severity",
+      "people": 1118,
+      "deaths": 103,
+      "event_fraction": 0.09212880143112702,
+      "burden_mean": 0.4110486420623696,
+      "burden_p05": 0.0,
+      "burden_median": 0.3,
+      "burden_p95": 1.0,
+      "mean_realized_increment_for_amrd": 0.0769498719977866,
+      "design_columns": 7,
+      "design_condition_number": 4.1401374936581465,
+      "original_fit_converged": true,
+      "bootstrap_replicates": 2000,
+      "bootstrap_failures": 0,
+      "intervals": {
+        "risk_0.00": {
+          "estimate": 0.07154647101436588,
+          "ci_low": 0.04865145456056942,
+          "ci_high": 0.0963133399548533
+        },
+        "risk_0.10": {
+          "estimate": 0.1023694566946012,
+          "ci_low": 0.07312172343094696,
+          "ci_high": 0.13571800781250778
+        },
+        "risk_0.25": {
+          "estimate": 0.1283941893890926,
+          "ci_low": 0.08090804707155407,
+          "ci_high": 0.18520294729502682
+        },
+        "risk_0.50": {
+          "estimate": 0.08192449170389607,
+          "ci_low": 0.04977999120407641,
+          "ci_high": 0.11827078676851017
+        },
+        "average_marginal_risk_difference": {
+          "estimate": 0.010346005989247935,
+          "ci_low": 0.0021768472859403608,
+          "ci_high": 0.018587606567843425
+        }
+      },
+      "performance": {
+        "brier": 0.0683145602962456,
+        "auroc": 0.8324931847529773,
+        "auprc": 0.39793120693281714,
+        "calibration_intercept": 8.132610694950722e-17,
+        "calibration_slope": 1.0
+      },
+      "interpretation": "Association under a measurement policy; not a causal effect or device-truth comparison."
+    },
+    {
+      "source": "sicdb",
+      "policy": "cuff_only",
+      "model": "age_sex",
+      "people": 1208,
+      "deaths": 111,
+      "event_fraction": 0.09188741721854304,
+      "burden_mean": 0.3898271999086252,
+      "burden_p05": 0.0,
+      "burden_median": 0.3273809523809524,
+      "burden_p95": 1.0,
+      "mean_realized_increment_for_amrd": 0.08867402225782316,
+      "design_columns": 6,
+      "design_condition_number": 3.8471445747564696,
+      "original_fit_converged": true,
+      "bootstrap_replicates": 2000,
+      "bootstrap_failures": 0,
+      "intervals": {
+        "risk_0.00": {
+          "estimate": 0.05651916365800547,
+          "ci_low": 0.034404506720672696,
+          "ci_high": 0.08087693231993717
+        },
+        "risk_0.10": {
+          "estimate": 0.0889651885396948,
+          "ci_low": 0.06445321311538675,
+          "ci_high": 0.11378030499958589
+        },
+        "risk_0.25": {
+          "estimate": 0.13154435843939533,
+          "ci_low": 0.0895948995067649,
+          "ci_high": 0.17731464486622683
+        },
+        "risk_0.50": {
+          "estimate": 0.09582156216541934,
+          "ci_low": 0.06660393349836656,
+          "ci_high": 0.12847296641031264
+        },
+        "average_marginal_risk_difference": {
+          "estimate": 0.011623469850063703,
+          "ci_low": 0.004994504160700764,
+          "ci_high": 0.017594644366303817
+        }
+      },
+      "performance": {
+        "brier": 0.08158677640506375,
+        "auroc": 0.6496012877052075,
+        "auprc": 0.14631437262594182,
+        "calibration_intercept": -9.435908982104728e-18,
+        "calibration_slope": 1.0
+      },
+      "interpretation": "Association under a measurement policy; not a causal effect or device-truth comparison."
+    },
+    {
+      "source": "sicdb",
+      "policy": "cuff_only",
+      "model": "age_sex_severity",
+      "people": 1208,
+      "deaths": 111,
+      "event_fraction": 0.09188741721854304,
+      "burden_mean": 0.3898271999086252,
+      "burden_p05": 0.0,
+      "burden_median": 0.3273809523809524,
+      "burden_p95": 1.0,
+      "mean_realized_increment_for_amrd": 0.08867402225782316,
+      "design_columns": 7,
+      "design_condition_number": 3.980546612579226,
+      "original_fit_converged": true,
+      "bootstrap_replicates": 2000,
+      "bootstrap_failures": 0,
+      "intervals": {
+        "risk_0.00": {
+          "estimate": 0.06371931209887884,
+          "ci_low": 0.03874150948219058,
+          "ci_high": 0.08830327017967635
+        },
+        "risk_0.10": {
+          "estimate": 0.08783657513459771,
+          "ci_low": 0.06534443906639387,
+          "ci_high": 0.11157020976093926
+        },
+        "risk_0.25": {
+          "estimate": 0.11690350935028525,
+          "ci_low": 0.0824027814587239,
+          "ci_high": 0.15744922216805873
+        },
+        "risk_0.50": {
+          "estimate": 0.09895742199765763,
+          "ci_low": 0.07173787295157201,
+          "ci_high": 0.129742916946886
+        },
+        "average_marginal_risk_difference": {
+          "estimate": 0.007445582402994516,
+          "ci_low": 0.002080559615414383,
+          "ci_high": 0.012787589820946325
+        }
+      },
+      "performance": {
+        "brier": 0.068985723830363,
+        "auroc": 0.8338178652672728,
+        "auprc": 0.38195168516676903,
+        "calibration_intercept": -2.3700405680501923e-16,
+        "calibration_slope": 0.9999999999999999
+      },
+      "interpretation": "Association under a measurement policy; not a causal effect or device-truth comparison."
+    }
+  ]
+}

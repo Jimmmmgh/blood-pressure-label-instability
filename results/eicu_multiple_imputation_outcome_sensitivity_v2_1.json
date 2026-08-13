@@ -1,0 +1,136 @@
+{
+  "generated_at_utc": "2026-08-13T00:57:08.296374+00:00",
+  "analysis_version": "2.1 post-analysis QA completion",
+  "source": "eicu",
+  "method": "20-imputation sensitivity combined with Rubin's rules",
+  "results": [
+    {
+      "source": "eicu",
+      "policy": "any_sensor",
+      "people": 7292,
+      "deaths": 1071,
+      "severity_missing": 802,
+      "severity_missing_fraction": 0.10998354360943499,
+      "imputations": 20,
+      "bootstrap_replicates_per_imputation": 2000,
+      "bootstrap_failures_total": 0,
+      "imputation_model": "Bayesian-ridge chained-equation draw including outcome, age, sex, policy burden, pair count, CCD, source burdens, and stable coverage",
+      "amrd": {
+        "estimate": 9.754936980082104e-05,
+        "ci_low": -0.003313612608231701,
+        "ci_high": 0.0035087113478333436,
+        "within_imputation_variance": 2.9945516179004543e-06,
+        "between_imputation_variance": 3.282170893387411e-08,
+        "total_variance": 3.029014412281022e-06,
+        "degrees_freedom": 146776.08609889256
+      },
+      "complete_case_amrd": {
+        "estimate": -0.0006387554644089531,
+        "ci_low": -0.004572758197650564,
+        "ci_high": 0.003060009156862537
+      },
+      "difference_from_complete_case": 0.0007363048342097741,
+      "performance_mean": {
+        "auroc": 0.828528990763642,
+        "brier": 0.09660877549375965
+      },
+      "interpretation": "Missing-data sensitivity; association, not causal effect."
+    },
+    {
+      "source": "eicu",
+      "policy": "arterial_only",
+      "people": 7292,
+      "deaths": 1071,
+      "severity_missing": 802,
+      "severity_missing_fraction": 0.10998354360943499,
+      "imputations": 20,
+      "bootstrap_replicates_per_imputation": 2000,
+      "bootstrap_failures_total": 0,
+      "imputation_model": "Bayesian-ridge chained-equation draw including outcome, age, sex, policy burden, pair count, CCD, source burdens, and stable coverage",
+      "amrd": {
+        "estimate": -0.0005352362742611273,
+        "ci_low": -0.0055468277978809105,
+        "ci_high": 0.004476355249358656,
+        "within_imputation_variance": 6.39219054996302e-06,
+        "between_imputation_variance": 1.3861966066785667e-07,
+        "total_variance": 6.537741193664269e-06,
+        "degrees_freedom": 38333.70433125341
+      },
+      "complete_case_amrd": {
+        "estimate": -0.002209393782692921,
+        "ci_low": -0.0073638893235471676,
+        "ci_high": 0.0030473416205805868
+      },
+      "difference_from_complete_case": 0.0016741575084317935,
+      "performance_mean": {
+        "auroc": 0.8279700424348059,
+        "brier": 0.09652445815663113
+      },
+      "interpretation": "Missing-data sensitivity; association, not causal effect."
+    },
+    {
+      "source": "eicu",
+      "policy": "concordant_only",
+      "people": 6741,
+      "deaths": 973,
+      "severity_missing": 751,
+      "severity_missing_fraction": 0.11140780299658805,
+      "imputations": 20,
+      "bootstrap_replicates_per_imputation": 2000,
+      "bootstrap_failures_total": 0,
+      "imputation_model": "Bayesian-ridge chained-equation draw including outcome, age, sex, policy burden, pair count, CCD, source burdens, and stable coverage",
+      "amrd": {
+        "estimate": -0.001820259934957128,
+        "ci_low": -0.010475763037090923,
+        "ci_high": 0.006835243167176666,
+        "within_imputation_variance": 1.9275440320008998e-05,
+        "between_imputation_variance": 2.1584919714191493e-07,
+        "total_variance": 1.9502081977008007e-05,
+        "degrees_freedom": 140681.2060683337
+      },
+      "complete_case_amrd": {
+        "estimate": -0.0037447719807476828,
+        "ci_low": -0.012822426434035023,
+        "ci_high": 0.005542854134172143
+      },
+      "difference_from_complete_case": 0.0019245120457905547,
+      "performance_mean": {
+        "auroc": 0.8277008708072179,
+        "brier": 0.09547812932341684
+      },
+      "interpretation": "Missing-data sensitivity; association, not causal effect."
+    },
+    {
+      "source": "eicu",
+      "policy": "cuff_only",
+      "people": 7292,
+      "deaths": 1071,
+      "severity_missing": 802,
+      "severity_missing_fraction": 0.10998354360943499,
+      "imputations": 20,
+      "bootstrap_replicates_per_imputation": 2000,
+      "bootstrap_failures_total": 0,
+      "imputation_model": "Bayesian-ridge chained-equation draw including outcome, age, sex, policy burden, pair count, CCD, source burdens, and stable coverage",
+      "amrd": {
+        "estimate": 0.0013837095308344835,
+        "ci_low": -0.0036757429834107617,
+        "ci_high": 0.006443162045079729,
+        "within_imputation_variance": 6.489457620541467e-06,
+        "between_imputation_variance": 1.6532950409529027e-07,
+        "total_variance": 6.663053599841522e-06,
+        "degrees_freedom": 27991.159594592496
+      },
+      "complete_case_amrd": {
+        "estimate": 0.0006625258718669256,
+        "ci_low": -0.004799917186216751,
+        "ci_high": 0.00589339899086579
+      },
+      "difference_from_complete_case": 0.0007211836589675578,
+      "performance_mean": {
+        "auroc": 0.8268765653397404,
+        "brier": 0.09685681100602259
+      },
+      "interpretation": "Missing-data sensitivity; association, not causal effect."
+    }
+  ]
+}

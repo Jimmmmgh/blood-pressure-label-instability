@@ -1,0 +1,162 @@
+{
+  "version": "1.0",
+  "frozen_date": "2026-08-12",
+  "measurement_stage_forbids_outcomes": true,
+  "common_derived_fields": [
+    "person_key_hash",
+    "unit_key_hash",
+    "pair_time_relative",
+    "arterial_map",
+    "cuff_map",
+    "delta_cuff_minus_arterial",
+    "abs_delta",
+    "arterial_low_65",
+    "cuff_low_65",
+    "threshold_discordant",
+    "large_discordance_10",
+    "ccd",
+    "source"
+  ],
+  "sources": {
+    "sicdb": {
+      "version": "1.0.8",
+      "tables": {
+        "cases.csv.gz": [
+          "CaseID",
+          "PatientID",
+          "AdmissionYear",
+          "TimeOfStay",
+          "ICUOffset",
+          "saps3",
+          "Sex",
+          "AgeOnAdmission",
+          "HospitalUnit",
+          "AdmissionUrgency",
+          "AdmissionFormHasSepsis",
+          "OffsetAfterFirstAdmission"
+        ],
+        "data_float_h.csv.gz": [
+          "CaseID",
+          "Offset",
+          "DataID",
+          "Val",
+          "rawdata"
+        ]
+      },
+      "modality_codes": {
+        "arterial_map": 703,
+        "cuff_map": 706
+      }
+    },
+    "mimic_iv": {
+      "tables": {
+        "mimiciv_icu.chartevents": [
+          "subject_id",
+          "stay_id",
+          "charttime",
+          "itemid",
+          "valuenum"
+        ],
+        "mimiciv_icu.icustays": [
+          "subject_id",
+          "hadm_id",
+          "stay_id",
+          "intime",
+          "outtime"
+        ],
+        "mimiciv_hosp.patients": [
+          "subject_id",
+          "gender",
+          "anchor_age"
+        ]
+      },
+      "itemids": {
+        "arterial_map": 220052,
+        "cuff_map": 220181
+      }
+    },
+    "eicu": {
+      "tables": {
+        "eicu_crd.vitalperiodic": [
+          "patientunitstayid",
+          "observationoffset",
+          "systemicmean"
+        ],
+        "eicu_crd.vitalaperiodic": [
+          "patientunitstayid",
+          "observationoffset",
+          "noninvasivemean"
+        ],
+        "eicu_crd.patient": [
+          "patientunitstayid",
+          "uniquepid",
+          "hospitalid",
+          "unitvisitnumber",
+          "age",
+          "gender",
+          "hospitaladmitoffset",
+          "unitadmitoffset",
+          "unittype",
+          "unitadmitsource"
+        ]
+      }
+    },
+    "vitaldb": {
+      "tracks": [
+        "SNUADC/ART",
+        "Solar8000/ART_MBP",
+        "Solar8000/NIBP_SBP",
+        "Solar8000/NIBP_DBP",
+        "Solar8000/NIBP_MBP"
+      ],
+      "metadata": [
+        "caseid",
+        "subjectid",
+        "opstart",
+        "opend"
+      ]
+    },
+    "inspire": {
+      "version": "1.4.2",
+      "tables": {
+        "vitals.csv.gz": [
+          "op_id",
+          "subject_id",
+          "chart_time",
+          "item_name",
+          "value"
+        ],
+        "operations.csv.gz": [
+          "op_id",
+          "subject_id",
+          "case_id",
+          "orin_time",
+          "orout_time"
+        ]
+      },
+      "item_names": [
+        "art_mbp",
+        "nibp_mbp"
+      ]
+    }
+  },
+  "outcome_stage_locked_fields": {
+    "sicdb": [
+      "DischargeState",
+      "HospitalDischargeType",
+      "HospitalDischargeDay",
+      "OffsetOfDeath"
+    ],
+    "mimic_iv": [
+      "hospital_expire_flag",
+      "deathtime",
+      "dischtime"
+    ],
+    "eicu": [
+      "hospitaldischargestatus",
+      "hospitaldischargeoffset",
+      "unitdischargestatus",
+      "unitdischargeoffset"
+    ]
+  }
+}

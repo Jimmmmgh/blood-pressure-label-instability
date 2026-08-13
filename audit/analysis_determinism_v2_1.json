@@ -1,0 +1,149 @@
+{
+  "schema_version": "2.1",
+  "audit_type": "baseline-then-clean-repeat determinism check",
+  "volatile_fields_excluded": [
+    "generated_at",
+    "generated_at_utc",
+    "generated_utc"
+  ],
+  "python": "3.13.0 | packaged by conda-forge | (main, Nov 27 2024, 19:03:49) [MSC v.1942 64 bit (AMD64)]",
+  "commands": [
+    {
+      "script": "scripts/analyze_primary_measurements.py",
+      "exit_code": 0,
+      "elapsed_seconds": 2.469,
+      "stdout_tail": "\n  \"external_minus_sicdb_ccd_difference\": {\n    \"mimic_iv\": {\n      \"estimate\": -0.018320822745407694,\n      \"ci_low\": -0.030536547615467497,\n      \"ci_high\": -0.006773930595066195\n    },\n    \"eicu\": {\n      \"estimate\": -0.016943327927286755,\n      \"ci_low\": -0.028601088444541366,\n      \"ci_high\": -0.00577800326848317\n    }\n  },\n  \"eicu_site_diagnostics\": {\n    \"all_hospitals\": 168,\n    \"hospitals_with_at_least_50_people\": 58,\n    \"largest_hospital_people\": 392,\n    \"largest_hospital_fraction_of_people\": 0.04347343905955418,\n    \"eligible_hospital_ccd_range\": [\n      0.04160942027101445,\n      0.21052705795062035\n    ],\n    \"leave_one_hospital_out_overall_range\": [\n      0.13185188003244805,\n      0.13467284924229703\n    ]\n  },\n  \"gates\": {\n    \"v2_capacity_gate\": true,\n    \"sicdb_primary_ccd_at_least_005\": true,\n    \"both_external_ccd_lower_ci_above_002\": true,\n    \"site_and_sensitivity_gate\": \"pending\",\n    \"flagship_viability_gate\": \"pending\",\n    \"outcome_firewall\": \"locked\"\n  }\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "script": "scripts/run_measurement_sensitivities.py",
+      "exit_code": 0,
+      "elapsed_seconds": 2.664,
+      "stdout_tail": "eople\": 1510,\n      \"pairs\": 30087,\n      \"estimate\": 0.17267006077659663,\n      \"ci_low\": 0.1653944485560293,\n      \"ci_high\": 0.1800903540357238,\n      \"pair_weighted\": 0.16588559843121614\n    },\n    \"mimic_iv\": {\n      \"people\": 4171,\n      \"pairs\": 33855,\n      \"estimate\": 0.1398888378846696,\n      \"ci_low\": 0.13527827733819048,\n      \"ci_high\": 0.14449021830615133,\n      \"pair_weighted\": 0.13847289912863683\n    },\n    \"eicu\": {\n      \"people\": 9017,\n      \"pairs\": 171016,\n      \"estimate\": 0.13183898455362822,\n      \"ci_low\": 0.12877893638963164,\n      \"ci_high\": 0.13489785746832306,\n      \"pair_weighted\": 0.12665481592365627\n    }\n  },\n  \"primary_conclusion_preserved_across_range_and_timing\": true,\n  \"notes\": [\n    \"Minimum-pair 1 and full-stay sensitivities require separate all-pair extracts and are not represented by this primary-population file.\",\n    \"Permutation is stratified on broad arterial-MAP bands and is a falsification analysis, not a physiological null model.\"\n  ]\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "script": "scripts/analyze_measurement_subgroups.py",
+      "exit_code": 0,
+      "elapsed_seconds": 1.921,
+      "stdout_tail": "    0.000000          0.000000      NaN         NaN\n    eicu      age_group     >=80     65-79    1421  0.162687 0.152539 0.173023               0.017682         0.004649          0.029999    0.006    0.009000\n    eicu      sex_group   Female    Female    3749  0.160884 0.154412 0.167279               0.000000         0.000000          0.000000      NaN         NaN\n    eicu      sex_group     Male    Female    5266  0.113840 0.109149 0.118867              -0.047044        -0.054870         -0.038840    0.000    0.000000\n    eicu      sex_group  Unknown    Female       2  0.125000 0.000000 0.250000              -0.035884        -0.165154          0.093518    0.518    0.518000\n    eicu     time_group   0-<6 h    6-24 h    6752  0.125107 0.119314 0.130732              -0.008866        -0.015367         -0.002431    0.008    0.009600\n    eicu     time_group   6-24 h    6-24 h    8094  0.133973 0.129205 0.138970               0.000000         0.000000          0.000000      NaN         NaN\n",
+      "stderr_tail": ""
+    },
+    {
+      "script": "scripts/summarize_policy_burden_shifts.py",
+      "exit_code": 0,
+      "elapsed_seconds": 0.634,
+      "stdout_tail": "e_burden_shift_at_least_010\": 0.5145049148885159,\n      \"fraction_cuff_higher_by_at_least_010\": 0.3641812514984416,\n      \"fraction_arterial_higher_by_at_least_010\": 0.15032366339007433,\n      \"stable_coverage\": 0.5156869978646083,\n      \"stable_coverage_ci_low\": 0.5066644061579807,\n      \"stable_coverage_ci_high\": 0.5244274897959694\n    },\n    \"eicu\": {\n      \"people\": 9017,\n      \"mean_burden_delta\": 0.01161181159713908,\n      \"mean_burden_delta_ci_low\": 0.005948529828955597,\n      \"mean_burden_delta_ci_high\": 0.01726417616038142,\n      \"median_burden_delta\": 0.0,\n      \"people_absolute_burden_shift_at_least_010\": 4103,\n      \"fraction_absolute_burden_shift_at_least_010\": 0.4550293889320173,\n      \"fraction_cuff_higher_by_at_least_010\": 0.2477542419873572,\n      \"fraction_arterial_higher_by_at_least_010\": 0.2072751469446601,\n      \"stable_coverage\": 0.5122628132683172,\n      \"stable_coverage_ci_low\": 0.5065438483302986,\n      \"stable_coverage_ci_high\": 0.5181387377494935\n    }\n  }\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "script": "scripts/analyze_locked_outcomes.py",
+      "exit_code": 0,
+      "elapsed_seconds": 25.792,
+      "stdout_tail": "\": 0.08783657513459771,\n          \"ci_low\": 0.06534443906639387,\n          \"ci_high\": 0.11157020976093926\n        },\n        \"risk_0.25\": {\n          \"estimate\": 0.11690350935028525,\n          \"ci_low\": 0.0824027814587239,\n          \"ci_high\": 0.15744922216805873\n        },\n        \"risk_0.50\": {\n          \"estimate\": 0.09895742199765763,\n          \"ci_low\": 0.07173787295157201,\n          \"ci_high\": 0.129742916946886\n        },\n        \"average_marginal_risk_difference\": {\n          \"estimate\": 0.007445582402994516,\n          \"ci_low\": 0.002080559615414383,\n          \"ci_high\": 0.012787589820946325\n        }\n      },\n      \"performance\": {\n        \"brier\": 0.068985723830363,\n        \"auroc\": 0.8338178652672728,\n        \"auprc\": 0.38195168516676903,\n        \"calibration_intercept\": -2.3700405680501923e-16,\n        \"calibration_slope\": 0.9999999999999999\n      },\n      \"interpretation\": \"Association under a measurement policy; not a causal effect or device-truth comparison.\"\n    }\n  ]\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "script": "scripts/analyze_eicu_multiple_imputation.py",
+      "exit_code": 0,
+      "elapsed_seconds": 141.612,
+      "stdout_tail": "     \"bootstrap_failures_total\": 0,\n      \"imputation_model\": \"Bayesian-ridge chained-equation draw including outcome, age, sex, policy burden, pair count, CCD, source burdens, and stable coverage\",\n      \"amrd\": {\n        \"estimate\": 0.0013837095308344835,\n        \"ci_low\": -0.0036757429834107617,\n        \"ci_high\": 0.006443162045079729,\n        \"within_imputation_variance\": 6.489457620541467e-06,\n        \"between_imputation_variance\": 1.6532950409529027e-07,\n        \"total_variance\": 6.663053599841522e-06,\n        \"degrees_freedom\": 27991.159594592496\n      },\n      \"complete_case_amrd\": {\n        \"estimate\": 0.0006625258718669256,\n        \"ci_low\": -0.004799917186216751,\n        \"ci_high\": 0.00589339899086579\n      },\n      \"difference_from_complete_case\": 0.0007211836589675578,\n      \"performance_mean\": {\n        \"auroc\": 0.8268765653397404,\n        \"brier\": 0.09685681100602259\n      },\n      \"interpretation\": \"Missing-data sensitivity; association, not causal effect.\"\n    }\n  ]\n}\n",
+      "stderr_tail": ""
+    }
+  ],
+  "artifacts": [
+    {
+      "relative_path": "results/measurement_primary_v2.json",
+      "normalization": "json_without_generation_timestamps",
+      "baseline_normalized_sha256": "5eb40b4150d5564c714a4c8c53b49451cfb95f2cc9efbf5354156817ee50f2fb",
+      "repeat_normalized_sha256": "5eb40b4150d5564c714a4c8c53b49451cfb95f2cc9efbf5354156817ee50f2fb",
+      "match": true
+    },
+    {
+      "relative_path": "tables/measurement_cohort_summary_v2.csv",
+      "normalization": "csv_with_normalized_newlines",
+      "baseline_normalized_sha256": "aa1f9b1695cf66dac891aae4cbb74a8669f05d7b519e07be626f2bbb507350c8",
+      "repeat_normalized_sha256": "aa1f9b1695cf66dac891aae4cbb74a8669f05d7b519e07be626f2bbb507350c8",
+      "match": true
+    },
+    {
+      "relative_path": "tables/measurement_estimands_v2.csv",
+      "normalization": "csv_with_normalized_newlines",
+      "baseline_normalized_sha256": "c3b3187e9e0efff1d2b4582680f6ebd7bf5e71b3b8606f68210645df0aacc086",
+      "repeat_normalized_sha256": "c3b3187e9e0efff1d2b4582680f6ebd7bf5e71b3b8606f68210645df0aacc086",
+      "match": true
+    },
+    {
+      "relative_path": "results/measurement_sensitivity_v2.json",
+      "normalization": "json_without_generation_timestamps",
+      "baseline_normalized_sha256": "a03eb420581443370e523376937add6c96683b964dd82c1d47b24357e9236265",
+      "repeat_normalized_sha256": "a03eb420581443370e523376937add6c96683b964dd82c1d47b24357e9236265",
+      "match": true
+    },
+    {
+      "relative_path": "tables/measurement_sensitivity_v2.csv",
+      "normalization": "csv_with_normalized_newlines",
+      "baseline_normalized_sha256": "54c9b2364e102a6bb006c4df53b6bc8cfaa358c3fcd3b4ba934b11b8f5eb0345",
+      "repeat_normalized_sha256": "54c9b2364e102a6bb006c4df53b6bc8cfaa358c3fcd3b4ba934b11b8f5eb0345",
+      "match": true
+    },
+    {
+      "relative_path": "results/measurement_subgroups_v2.json",
+      "normalization": "json_without_generation_timestamps",
+      "baseline_normalized_sha256": "955b7524e682b24938a36bc895197907db8cf284f41da8b4e58233b898403d30",
+      "repeat_normalized_sha256": "955b7524e682b24938a36bc895197907db8cf284f41da8b4e58233b898403d30",
+      "match": true
+    },
+    {
+      "relative_path": "tables/measurement_subgroups_v2.csv",
+      "normalization": "csv_with_normalized_newlines",
+      "baseline_normalized_sha256": "6dd671dc12caff75b9bfefd234b0973839ecdbb28d5153dd9e6db825358d74e1",
+      "repeat_normalized_sha256": "6dd671dc12caff75b9bfefd234b0973839ecdbb28d5153dd9e6db825358d74e1",
+      "match": true
+    },
+    {
+      "relative_path": "results/policy_burden_shifts_v2.json",
+      "normalization": "json_without_generation_timestamps",
+      "baseline_normalized_sha256": "aeb1ba13d9f9771f1eea9acedd27651505b2e786b3aef65de7f642c0f0ee8018",
+      "repeat_normalized_sha256": "aeb1ba13d9f9771f1eea9acedd27651505b2e786b3aef65de7f642c0f0ee8018",
+      "match": true
+    },
+    {
+      "relative_path": "tables/policy_burden_shifts_v2.csv",
+      "normalization": "csv_with_normalized_newlines",
+      "baseline_normalized_sha256": "d99d185f92ff66d60dcd62be8dee3e21ecadd24ff07a6e7f9311fa4115244dee",
+      "repeat_normalized_sha256": "d99d185f92ff66d60dcd62be8dee3e21ecadd24ff07a6e7f9311fa4115244dee",
+      "match": true
+    },
+    {
+      "relative_path": "results/locked_outcome_models_v2.json",
+      "normalization": "json_without_generation_timestamps",
+      "baseline_normalized_sha256": "0e152f91f6aaa9cc54aa67ef7981d4f8d8e12326fc77dbae636467884917fb64",
+      "repeat_normalized_sha256": "0e152f91f6aaa9cc54aa67ef7981d4f8d8e12326fc77dbae636467884917fb64",
+      "match": true
+    },
+    {
+      "relative_path": "tables/locked_outcome_estimands_v2.csv",
+      "normalization": "csv_with_normalized_newlines",
+      "baseline_normalized_sha256": "331f99f33228304107ea4ea06ce58de7bc89e396b0915926933dd1aa63b3e7e1",
+      "repeat_normalized_sha256": "331f99f33228304107ea4ea06ce58de7bc89e396b0915926933dd1aa63b3e7e1",
+      "match": true
+    },
+    {
+      "relative_path": "results/eicu_multiple_imputation_outcome_sensitivity_v2_1.json",
+      "normalization": "json_without_generation_timestamps",
+      "baseline_normalized_sha256": "7e01355e26f447cd20343386b85687df69dc63e12bffb338e3bf617a9963e649",
+      "repeat_normalized_sha256": "7e01355e26f447cd20343386b85687df69dc63e12bffb338e3bf617a9963e649",
+      "match": true
+    },
+    {
+      "relative_path": "tables/eicu_multiple_imputation_outcome_sensitivity_v2_1.csv",
+      "normalization": "csv_with_normalized_newlines",
+      "baseline_normalized_sha256": "20bc74a314f8611695099f688d5a5c73329d3219f88dde567edf88b609db9d6f",
+      "repeat_normalized_sha256": "20bc74a314f8611695099f688d5a5c73329d3219f88dde567edf88b609db9d6f",
+      "match": true
+    }
+  ],
+  "all_normalized_artifacts_match": true,
+  "status": "PASS"
+}

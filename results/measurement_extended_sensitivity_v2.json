@@ -1,0 +1,156 @@
+{
+  "generated_at_utc": "2026-08-13T00:20:48.952002+00:00",
+  "outcomes_read": false,
+  "sources": {
+    "sicdb": {
+      "first24_min1": {
+        "people": 2213,
+        "pairs": 31071,
+        "ccd_fraction": 0.14893578814418443,
+        "ci_low": 0.13842577727689412,
+        "ci_high": 0.1589850030076957,
+        "pair_weighted_ccd": 0.1567377940845161,
+        "pairs_per_person_median": 5.0,
+        "pairs_per_person_p25": 2.0,
+        "pairs_per_person_p75": 13.0,
+        "flow": {
+          "pairs_before_adult_and_range_filter": 32408,
+          "units_before_filter": 2319,
+          "people_before_filter": 2214,
+          "adult_plausible_pairs": 32407,
+          "adult_plausible_units": 2318,
+          "units_with_at_least_1_pairs": 2318,
+          "people_with_at_least_1_pairs": 2213,
+          "selected_first_eligible_units": 2213,
+          "selected_people": 2213,
+          "selected_pairs": 31071
+        },
+        "private_extract": "<protected-row-level-extract-not-included>"
+      },
+      "fullstay_min3": {
+        "people": 2797,
+        "pairs": 95032,
+        "ccd_fraction": 0.15320377561672344,
+        "ci_low": 0.14597236406222044,
+        "ci_high": 0.16060956411070412,
+        "pair_weighted_ccd": 0.13721693745264754,
+        "pairs_per_person_median": 11.0,
+        "pairs_per_person_p25": 5.0,
+        "pairs_per_person_p75": 24.0,
+        "flow": {
+          "pairs_before_adult_and_range_filter": 100008,
+          "units_before_filter": 4047,
+          "people_before_filter": 3791,
+          "adult_plausible_pairs": 99979,
+          "adult_plausible_units": 4041,
+          "units_with_at_least_3_pairs": 2934,
+          "people_with_at_least_3_pairs": 2797,
+          "selected_first_eligible_units": 2797,
+          "selected_people": 2797,
+          "selected_pairs": 95032
+        },
+        "private_extract": "<protected-row-level-extract-not-included>"
+      }
+    },
+    "mimic_iv": {
+      "first24_min1": {
+        "people": 9100,
+        "pairs": 39529,
+        "ccd_fraction": 0.12862657163245192,
+        "ci_low": 0.12301882728248525,
+        "ci_high": 0.13406192794447486,
+        "pair_weighted_ccd": 0.129955222747856,
+        "pairs_per_person_median": 2.0,
+        "pairs_per_person_p25": 1.0,
+        "pairs_per_person_p75": 6.0,
+        "flow": {
+          "pairs_before_adult_and_range_filter": 41904,
+          "units_before_filter": 9582,
+          "people_before_filter": 9100,
+          "adult_plausible_pairs": 41904,
+          "adult_plausible_units": 9582,
+          "units_with_at_least_1_pairs": 9582,
+          "people_with_at_least_1_pairs": 9100,
+          "selected_first_eligible_units": 9100,
+          "selected_people": 9100,
+          "selected_pairs": 39529
+        },
+        "private_extract": "<protected-row-level-extract-not-included>"
+      },
+      "fullstay_min3": {
+        "people": 8512,
+        "pairs": 131695,
+        "ccd_fraction": 0.12767509353945047,
+        "ci_low": 0.12399112326678605,
+        "ci_high": 0.1313688774945785,
+        "pair_weighted_ccd": 0.12588177227685182,
+        "pairs_per_person_median": 9.0,
+        "pairs_per_person_p25": 5.0,
+        "pairs_per_person_p75": 18.0,
+        "flow": {
+          "pairs_before_adult_and_range_filter": 153760,
+          "units_before_filter": 16253,
+          "people_before_filter": 14968,
+          "adult_plausible_pairs": 153760,
+          "adult_plausible_units": 16253,
+          "units_with_at_least_3_pairs": 9085,
+          "people_with_at_least_3_pairs": 8512,
+          "selected_first_eligible_units": 8512,
+          "selected_people": 8512,
+          "selected_pairs": 131695
+        },
+        "private_extract": "<protected-row-level-extract-not-included>"
+      }
+    },
+    "eicu": {
+      "first24_min1": {
+        "people": 19784,
+        "pairs": 182138,
+        "ccd_fraction": 0.13996519003518412,
+        "ci_low": 0.13611106334187723,
+        "ci_high": 0.1437990292159907,
+        "pair_weighted_ccd": 0.12270915459706376,
+        "pairs_per_person_median": 2.0,
+        "pairs_per_person_p25": 1.0,
+        "pairs_per_person_p75": 9.0,
+        "flow": {
+          "pairs_before_adult_and_range_filter": 189842,
+          "units_before_filter": 20720,
+          "people_before_filter": 19809,
+          "adult_plausible_pairs": 189393,
+          "adult_plausible_units": 20695,
+          "units_with_at_least_1_pairs": 20695,
+          "people_with_at_least_1_pairs": 19784,
+          "selected_first_eligible_units": 19784,
+          "selected_people": 19784,
+          "selected_pairs": 182138
+        },
+        "private_extract": "<protected-row-level-extract-not-included>"
+      },
+      "fullstay_min3": {
+        "people": 14261,
+        "pairs": 431246,
+        "ccd_fraction": 0.13228789549575276,
+        "ci_low": 0.12924612585169712,
+        "ci_high": 0.13526407168603646,
+        "pair_weighted_ccd": 0.11517556104868219,
+        "pairs_per_person_median": 10.0,
+        "pairs_per_person_p25": 4.0,
+        "pairs_per_person_p75": 30.0,
+        "flow": {
+          "pairs_before_adult_and_range_filter": 466210,
+          "units_before_filter": 28007,
+          "people_before_filter": 26291,
+          "adult_plausible_pairs": 465403,
+          "adult_plausible_units": 27975,
+          "units_with_at_least_3_pairs": 14811,
+          "people_with_at_least_3_pairs": 14261,
+          "selected_first_eligible_units": 14261,
+          "selected_people": 14261,
+          "selected_pairs": 431246
+        },
+        "private_extract": "<protected-row-level-extract-not-included>"
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "generated_at_utc": "2026-08-12T14:51:14.375587+00:00",
+  "role": "selected raw-waveform technical substudy; not prevalence cohort",
+  "tasks": 2749,
+  "load_success": 2749,
+  "load_error": 0,
+  "triplet_aligned_cases": 2567,
+  "cases_with_any_plausible_state_change": 2519,
+  "plausible_state_change_episodes": 25623,
+  "coverage_eligible_windows": 25359,
+  "cases_with_at_least_three_coverage_eligible_windows": 2359,
+  "waveform_quality_pass_windows": 12177,
+  "quality_pass_fraction_among_coverage_eligible": 0.48018454986395365,
+  "quality_failure_counts_among_coverage_eligible": {
+    "outside_fraction_above_005": 12766,
+    "amplitude_below_10": 744,
+    "amplitude_above_150": 8796,
+    "flat_adjacent_fraction_at_least_095": 0,
+    "missing_run_above_5_seconds": 42
+  },
+  "numeric_waveform_concordant_windows": 7599,
+  "technical_subset_windows": 6810,
+  "technical_subset_people": 1548,
+  "selected_equal_person_ccd_fraction": {
+    "estimate": 0.0840501486760607,
+    "ci_low": 0.07275000844564115,
+    "ci_high": 0.09457592972396231
+  },
+  "raw_waveform_gate_pass": false,
+  "load_error_examples": [],
+  "selection_warning": "Cuff updates are inferred only when at least one carried-forward NIBP value changes; identical consecutive cuff results are unobservable."
+}

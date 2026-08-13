@@ -1,0 +1,289 @@
+{
+  "generated_at_utc": "2026-08-13T00:54:15.783014+00:00",
+  "protocol_version": "2.0 pre-result restart",
+  "outcomes_read": false,
+  "bootstrap_replicates": 2000,
+  "seed": 20260812,
+  "sources": [
+    {
+      "source": "sicdb",
+      "source_label": "SICdb",
+      "people": 1510,
+      "units": 1510,
+      "pairs": 30087,
+      "pairs_per_person": {
+        "p25": 4.0,
+        "median": 8.0,
+        "p75": 19.0,
+        "p90": 37.100000000000136
+      },
+      "estimands": {
+        "ccd_fraction": {
+          "estimate": 0.1503449705988768,
+          "ci_low": 0.14005626456714373,
+          "ci_high": 0.16064217736141204
+        },
+        "threshold_discordant_fraction": {
+          "estimate": 0.2406811859289229,
+          "ci_low": 0.22781280351883332,
+          "ci_high": 0.2524311107132623
+        },
+        "large_discordance_fraction": {
+          "estimate": 0.38289846576394443,
+          "ci_low": 0.3674930716795505,
+          "ci_high": 0.39815058426317607
+        },
+        "ccd_cuff_low_fraction": {
+          "estimate": 0.08137411681135055,
+          "ci_low": 0.07309085303944399,
+          "ci_high": 0.09000524840659362
+        },
+        "ccd_arterial_low_fraction": {
+          "estimate": 0.06897085378752625,
+          "ci_low": 0.061750481309550215,
+          "ci_high": 0.07623517261243358
+        },
+        "review_fraction": {
+          "estimate": 0.4732346810939904,
+          "ci_low": 0.45745080897548135,
+          "ci_high": 0.4879010210441816
+        },
+        "pair_weighted_ccd_fraction": {
+          "estimate": 0.15747665104530195,
+          "ci_low": NaN,
+          "ci_high": NaN
+        }
+      },
+      "agreement": {
+        "mean_bias": {
+          "estimate": -4.860146255599667,
+          "ci_low": -7.205521431803368,
+          "ci_high": -2.828838133421588
+        },
+        "lower_loa": {
+          "estimate": -48.0565752216887,
+          "ci_low": -61.86611174666684,
+          "ci_high": -37.330297587636046
+        },
+        "upper_loa": {
+          "estimate": 38.33628271048937,
+          "ci_low": 30.83255281525579,
+          "ci_high": 48.323196179726594
+        },
+        "rmse": {
+          "estimate": 22.568166756027022,
+          "ci_low": 17.71897066110572,
+          "ci_high": 28.778647528634192
+        }
+      },
+      "equal_person_median_delta": {
+        "estimate": -1.4999980926513672,
+        "ci_low": -2.0,
+        "ci_high": -1.0
+      },
+      "equal_person_median_abs_delta": {
+        "estimate": 7.000030517578125,
+        "ci_low": 7.0,
+        "ci_high": 7.5000152587890625
+      }
+    },
+    {
+      "source": "mimic_iv",
+      "source_label": "MIMIC-IV",
+      "people": 4171,
+      "units": 4171,
+      "pairs": 33855,
+      "pairs_per_person": {
+        "p25": 4.0,
+        "median": 6.0,
+        "p75": 11.0,
+        "p90": 16.0
+      },
+      "estimands": {
+        "ccd_fraction": {
+          "estimate": 0.1320241478534691,
+          "ci_low": 0.12619009295498093,
+          "ci_high": 0.13818598043687835
+        },
+        "threshold_discordant_fraction": {
+          "estimate": 0.21478991600371466,
+          "ci_low": 0.20791264533480255,
+          "ci_high": 0.22239484123635114
+        },
+        "large_discordance_fraction": {
+          "estimate": 0.40154723398514613,
+          "ci_low": 0.39223452267910475,
+          "ci_high": 0.41101847015566656
+        },
+        "ccd_cuff_low_fraction": {
+          "estimate": 0.09638021774279307,
+          "ci_low": 0.0910753983354193,
+          "ci_high": 0.10172332460351502
+        },
+        "ccd_arterial_low_fraction": {
+          "estimate": 0.03564393011067604,
+          "ci_low": 0.03237052058006812,
+          "ci_high": 0.03882542119069527
+        },
+        "review_fraction": {
+          "estimate": 0.48431300213539175,
+          "ci_low": 0.4755725102040307,
+          "ci_high": 0.49333559384201925
+        },
+        "pair_weighted_ccd_fraction": {
+          "estimate": 0.130202333481022,
+          "ci_low": NaN,
+          "ci_high": NaN
+        }
+      },
+      "agreement": {
+        "mean_bias": {
+          "estimate": -5.185496978289765,
+          "ci_low": -5.505348835077325,
+          "ci_high": -4.869663819818796
+        },
+        "lower_loa": {
+          "estimate": -31.159154434437966,
+          "ci_low": -32.028014653047194,
+          "ci_high": -30.322260022652838
+        },
+        "upper_loa": {
+          "estimate": 20.788160477858433,
+          "ci_low": 20.035534606068346,
+          "ci_high": 21.544506906410515
+        },
+        "rmse": {
+          "estimate": 14.230114037304697,
+          "ci_low": 13.845401198496852,
+          "ci_high": 14.636493366204856
+        }
+      },
+      "equal_person_median_delta": {
+        "estimate": -5.0,
+        "ci_low": -5.0,
+        "ci_high": -4.5
+      },
+      "equal_person_median_abs_delta": {
+        "estimate": 7.5,
+        "ci_low": 7.0,
+        "ci_high": 7.5
+      }
+    },
+    {
+      "source": "eicu",
+      "source_label": "eICU",
+      "people": 9017,
+      "units": 9017,
+      "pairs": 171016,
+      "pairs_per_person": {
+        "p25": 4.0,
+        "median": 11.0,
+        "p75": 25.0,
+        "p90": 46.0
+      },
+      "estimands": {
+        "ccd_fraction": {
+          "estimate": 0.13340164267159005,
+          "ci_low": 0.12952071825649486,
+          "ci_high": 0.13746222275031328
+        },
+        "threshold_discordant_fraction": {
+          "estimate": 0.19636971170278913,
+          "ci_low": 0.19175047796704722,
+          "ci_high": 0.20114726550730647
+        },
+        "large_discordance_fraction": {
+          "estimate": 0.42476911770048376,
+          "ci_low": 0.41875586912802026,
+          "ci_high": 0.4308473477336151
+        },
+        "ccd_cuff_low_fraction": {
+          "estimate": 0.06926300753466383,
+          "ci_low": 0.06626487425194079,
+          "ci_high": 0.07227265651638018
+        },
+        "ccd_arterial_low_fraction": {
+          "estimate": 0.06413863513692622,
+          "ci_low": 0.06106128571633924,
+          "ci_high": 0.06748668788803319
+        },
+        "review_fraction": {
+          "estimate": 0.4877371867316828,
+          "ci_low": 0.4818612622505065,
+          "ci_high": 0.49345615166970136
+        },
+        "pair_weighted_ccd_fraction": {
+          "estimate": 0.12069630911727558,
+          "ci_low": NaN,
+          "ci_high": NaN
+        }
+      },
+      "agreement": {
+        "mean_bias": {
+          "estimate": -2.095610936988352,
+          "ci_low": -2.3553471854625676,
+          "ci_high": -1.828471768779108
+        },
+        "lower_loa": {
+          "estimate": -30.62121321385066,
+          "ci_low": -31.227217492103172,
+          "ci_high": -30.01053543624727
+        },
+        "upper_loa": {
+          "estimate": 26.429991339873958,
+          "ci_low": 25.890522590709082,
+          "ci_high": 26.967358253534375
+        },
+        "rmse": {
+          "estimate": 14.703935942875658,
+          "ci_low": 14.445325419460051,
+          "ci_high": 14.97261379108549
+        }
+      },
+      "equal_person_median_delta": {
+        "estimate": -1.5,
+        "ci_low": -2.0,
+        "ci_high": -1.0
+      },
+      "equal_person_median_abs_delta": {
+        "estimate": 8.0,
+        "ci_low": 7.5,
+        "ci_high": 8.0
+      }
+    }
+  ],
+  "external_minus_sicdb_ccd_difference": {
+    "mimic_iv": {
+      "estimate": -0.018320822745407694,
+      "ci_low": -0.030536547615467497,
+      "ci_high": -0.006773930595066195
+    },
+    "eicu": {
+      "estimate": -0.016943327927286755,
+      "ci_low": -0.028601088444541366,
+      "ci_high": -0.00577800326848317
+    }
+  },
+  "eicu_site_diagnostics": {
+    "all_hospitals": 168,
+    "hospitals_with_at_least_50_people": 58,
+    "largest_hospital_people": 392,
+    "largest_hospital_fraction_of_people": 0.04347343905955418,
+    "eligible_hospital_ccd_range": [
+      0.04160942027101445,
+      0.21052705795062035
+    ],
+    "leave_one_hospital_out_overall_range": [
+      0.13185188003244805,
+      0.13467284924229703
+    ]
+  },
+  "gates": {
+    "v2_capacity_gate": true,
+    "sicdb_primary_ccd_at_least_005": true,
+    "both_external_ccd_lower_ci_above_002": true,
+    "site_and_sensitivity_gate": "pending",
+    "flagship_viability_gate": "pending",
+    "outcome_firewall": "locked"
+  }
+}

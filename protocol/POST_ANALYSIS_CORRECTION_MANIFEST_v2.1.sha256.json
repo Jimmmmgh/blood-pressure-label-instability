@@ -1,0 +1,224 @@
+{
+  "schema_version": "2.1",
+  "created_at_utc": "2026-08-13T01:00:17.179766+00:00",
+  "status": "post-result correction manifest; not preregistration",
+  "correction_scope": [
+    "MIMIC-IV age at ICU admission",
+    "eICU APACHE IVa multiple-imputation sensitivity",
+    "completion of remaining prespecified cohort-rule sensitivities",
+    "deterministic row ordering and reporting terminology"
+  ],
+  "files": [
+    {
+      "relative_path": "protocol/POST_ANALYSIS_QA_CORRECTIONS_v2.1.md",
+      "bytes": 2691,
+      "sha256": "22e3bd007a83cecee0c55422580485874c99189d2baa38d20327565c4815ee86",
+      "redistributable": true
+    },
+    {
+      "relative_path": "scripts/extract_primary_measurements.py",
+      "bytes": 13741,
+      "sha256": "6d8b68e7869954977112e369404a7801613eb10403ef145d29d6ae5180add9d8",
+      "redistributable": true
+    },
+    {
+      "relative_path": "scripts/extract_extended_sensitivities.py",
+      "bytes": 10001,
+      "sha256": "370a725b06750acaae623797d916df071715845c2b1cc0a9d6044ed17ac6aeaa",
+      "redistributable": true
+    },
+    {
+      "relative_path": "scripts/extract_locked_outcomes.py",
+      "bytes": 7257,
+      "sha256": "db14d1b11503b60940e74a527b119e946088b7a9e87454622ef2376637f5231c",
+      "redistributable": true
+    },
+    {
+      "relative_path": "scripts/analyze_primary_measurements.py",
+      "bytes": 11285,
+      "sha256": "ae1cd263be10450d62f1f7f383b1e6f9e01b5370391db54583e0e73bd1d6b737",
+      "redistributable": true
+    },
+    {
+      "relative_path": "scripts/run_measurement_sensitivities.py",
+      "bytes": 7320,
+      "sha256": "e8dbdb377f3b2504e60340234c67d4ec1528644ce113482978dc7356e6bea01d",
+      "redistributable": true
+    },
+    {
+      "relative_path": "scripts/analyze_measurement_subgroups.py",
+      "bytes": 11978,
+      "sha256": "84383b8f09f5cd54f21c4050293934e9398df85edbfeb8eee818305a2fe5995a",
+      "redistributable": true
+    },
+    {
+      "relative_path": "scripts/summarize_policy_burden_shifts.py",
+      "bytes": 3270,
+      "sha256": "b25b7341a91cbd5a985399c9ef16cd801d3becdba65c54b8d7b27e912977e9f3",
+      "redistributable": true
+    },
+    {
+      "relative_path": "scripts/analyze_locked_outcomes.py",
+      "bytes": 11122,
+      "sha256": "265fd1c73df1be0923f743c6da14485b3800d41605f0e747d3093c520f53c5c0",
+      "redistributable": true
+    },
+    {
+      "relative_path": "scripts/analyze_eicu_multiple_imputation.py",
+      "bytes": 10249,
+      "sha256": "90bcfb691ad8c5e6dbb29ccf9a741efc4910cb1d08f9bb8a7522925677eb3e8b",
+      "redistributable": true
+    },
+    {
+      "relative_path": "scripts/run_remaining_prespecified_sensitivities.py",
+      "bytes": 10854,
+      "sha256": "976231fe278450cdb387d94be6d639ac32c6bedbdfc0ce27f6a700744e7ef1a2",
+      "redistributable": true
+    },
+    {
+      "relative_path": "scripts/audit_mimic_age_correction_v2_1.py",
+      "bytes": 6529,
+      "sha256": "4dff7d61680f6cbd09c4b79e6362d9131f40512ffffcf27313a020478522a99e",
+      "redistributable": true
+    },
+    {
+      "relative_path": "scripts/verify_analysis_determinism_v2_1.py",
+      "bytes": 5731,
+      "sha256": "a0927d63e9415996ed6b17abce2ee971d1a22defc08bdd43a2e3d052af80665d",
+      "redistributable": true
+    },
+    {
+      "relative_path": "scripts/build_manuscript_tables.py",
+      "bytes": 8766,
+      "sha256": "aa3cd5a4b7b7e1cf3038ce1337f3b50ba3f69830d91eee38b2b67aa920c93c3f",
+      "redistributable": true
+    },
+    {
+      "relative_path": "scripts/build_supplement.py",
+      "bytes": 26816,
+      "sha256": "ae9d985e7cd7afe494095bb5d78385e6b7d201d83721655a75692c81ee2be02f",
+      "redistributable": true
+    },
+    {
+      "relative_path": "scripts/create_publication_figures.py",
+      "bytes": 21272,
+      "sha256": "6e80a50f3144cf13c07c6a93344c7342752fcc5807fdcb725b432bf571caea11",
+      "redistributable": true
+    },
+    {
+      "relative_path": "audit/mimic_age_correction_v2_1.json",
+      "bytes": 1434,
+      "sha256": "4fedb3b388fc291bcf5cc1763460523e92214572c80a0fac1bdf6691ef3f7693",
+      "redistributable": true
+    },
+    {
+      "relative_path": "audit/analysis_determinism_v2_1.json",
+      "bytes": 12718,
+      "sha256": "5b76275f529fab8651a87abde084ac7e25884a0b91d73b7a6ccd4282e4bd035e",
+      "redistributable": true
+    },
+    {
+      "relative_path": "audit/cohort_flow/mimic_iv_flow_v1.json",
+      "bytes": 1118,
+      "sha256": "44c591cafdc9c58be4a022e714db199051288ee16c24584dab08ab9aa254e216",
+      "redistributable": true
+    },
+    {
+      "relative_path": "analysis/private/mimic_iv_primary_pairs_v1.parquet",
+      "bytes": 558724,
+      "sha256": "b7eab781e2bf7594760556c238e6be6a042279ebbb9d4a421742a455d59aca65",
+      "redistributable": false
+    },
+    {
+      "relative_path": "analysis/private/mimic_iv_locked_landmark_outcome_v2.parquet",
+      "bytes": 154833,
+      "sha256": "684ae27c0148484cd0f3afb6da4ff472710464685833dec49b4cd169b7442c49",
+      "redistributable": false
+    },
+    {
+      "relative_path": "results/measurement_primary_v2.json",
+      "bytes": 8577,
+      "sha256": "5d12e84d5287376d70657d745a5de52d0e7e533739169d9d69825b7ca39b90b9",
+      "redistributable": true
+    },
+    {
+      "relative_path": "results/measurement_sensitivity_v2.json",
+      "bytes": 2930,
+      "sha256": "a690fddda6100fe5fc3cdc9652ec1db57318979a2a4f78fe703795fe370239e0",
+      "redistributable": true
+    },
+    {
+      "relative_path": "results/measurement_subgroups_v2.json",
+      "bytes": 16674,
+      "sha256": "57b0b26c9449fbd122a4ccf0acf3698be475b498adb7194355223d2339661a7c",
+      "redistributable": true
+    },
+    {
+      "relative_path": "results/policy_burden_shifts_v2.json",
+      "bytes": 2116,
+      "sha256": "f19f3cb235a9bfd4217495d906063b5696c9cc97fffcf01a1af7db8dca9cf58c",
+      "redistributable": true
+    },
+    {
+      "relative_path": "results/locked_outcome_models_v2.json",
+      "bytes": 44067,
+      "sha256": "5957dd8e78d6d0bd8b68aa0de40947ce2ef22383c2654a99fc1a8267fc449afe",
+      "redistributable": true
+    },
+    {
+      "relative_path": "results/eicu_multiple_imputation_outcome_sensitivity_v2_1.json",
+      "bytes": 5425,
+      "sha256": "2d20070caa6578f8589383c51d4929b90961605a5111979d90e148f2693c0636",
+      "redistributable": true
+    },
+    {
+      "relative_path": "results/remaining_prespecified_sensitivities_v2_1.json",
+      "bytes": 5804,
+      "sha256": "bb8f33a7e62942a031d5c5afa9c7b7c51166f9d32f8260e4f2cf0ccd92a7623d",
+      "redistributable": true
+    },
+    {
+      "relative_path": "results/vitaldb_waveform_substudy_v2.json",
+      "bytes": 1318,
+      "sha256": "527e9b4d6ce83f151e03000b4f4f5067839331d3fbb3b6c3fe82cbce806a61db",
+      "redistributable": true
+    },
+    {
+      "relative_path": "tables/Table_1_cohort_characteristics.csv",
+      "bytes": 418,
+      "sha256": "a0481251207ed15572719e6cbe28defa7cad77c2ad6e77d437adb4fcdb4c7bfb",
+      "redistributable": true
+    },
+    {
+      "relative_path": "tables/Table_2_measurement_results.csv",
+      "bytes": 547,
+      "sha256": "e927fc0dc49488ab3f7c63fe54d966351799d3f10160f17dba2bcefa8d3fb200",
+      "redistributable": true
+    },
+    {
+      "relative_path": "tables/Table_3_outcome_sensitivity.csv",
+      "bytes": 790,
+      "sha256": "e1e38f768565f2e801384250b913612200950aaef54bfa39191f9ec8f6962c7f",
+      "redistributable": true
+    },
+    {
+      "relative_path": "tables/measurement_subgroups_v2.csv",
+      "bytes": 5214,
+      "sha256": "724b530051ca7a03dbdab3088ca8595654b6719eebd060b69112b5d61b25080e",
+      "redistributable": true
+    },
+    {
+      "relative_path": "tables/eicu_multiple_imputation_outcome_sensitivity_v2_1.csv",
+      "bytes": 1098,
+      "sha256": "20bc74a314f8611695099f688d5a5c73329d3219f88dde567edf88b609db9d6f",
+      "redistributable": true
+    },
+    {
+      "relative_path": "tables/remaining_prespecified_sensitivities_v2_1.csv",
+      "bytes": 1544,
+      "sha256": "bcca8c975e0881f8ab8fabfa7a65b665a956c2e93cb4cb2f9c0a56374453e932",
+      "redistributable": true
+    }
+  ],
+  "private_files_are_hash_metadata_only": true
+}

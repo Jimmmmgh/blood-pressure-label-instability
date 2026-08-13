@@ -1,0 +1,13 @@
+Source,Policy,"Age/sex-adjusted AMRD, percentage points (95% CI)","Severity-adjusted AMRD, percentage points (95% CI)"
+SICdb,Arterial only,0.5 (-0.1 to 1.2),0.2 (-0.5 to 0.7)
+SICdb,Cuff only,1.2 (0.5 to 1.8),0.7 (0.2 to 1.3)
+SICdb,Any sensor,0.7 (0.2 to 1.1),0.4 (0.0 to 0.8)
+SICdb,Concordant only,1.5 (0.5 to 2.5),1.0 (0.2 to 1.9)
+MIMIC-IV,Arterial only,1.1 (0.4 to 1.8),-0.1 (-0.8 to 0.5)
+MIMIC-IV,Cuff only,1.0 (0.5 to 1.5),0.1 (-0.3 to 0.6)
+MIMIC-IV,Any sensor,0.6 (0.2 to 1.1),-0.2 (-0.6 to 0.2)
+MIMIC-IV,Concordant only,0.9 (-0.2 to 1.9),-0.1 (-1.0 to 0.8)
+eICU,Arterial only,1.8 (1.2 to 2.4),-0.2 (-0.7 to 0.3)
+eICU,Cuff only,1.2 (0.6 to 1.8),0.1 (-0.5 to 0.6)
+eICU,Any sensor,1.2 (0.8 to 1.6),-0.1 (-0.5 to 0.3)
+eICU,Concordant only,1.3 (0.2 to 2.3),-0.4 (-1.3 to 0.6)

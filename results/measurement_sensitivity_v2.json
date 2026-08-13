@@ -1,0 +1,98 @@
+{
+  "generated_at_utc": "2026-08-13T00:54:18.440256+00:00",
+  "protocol_version": "2.0 pre-result restart",
+  "outcomes_read": false,
+  "bootstrap_replicates": 2000,
+  "core_range_and_timing_summary": [
+    {
+      "source": "eicu",
+      "min_estimate": 0.11831927169894338,
+      "max_estimate": 0.13340164267159005,
+      "min_ci_low": 0.1126316375295331,
+      "min_people": 5073
+    },
+    {
+      "source": "mimic_iv",
+      "min_estimate": 0.12647461543887098,
+      "max_estimate": 0.1320241478534691,
+      "min_ci_low": 0.11481894969456537,
+      "min_people": 1254
+    },
+    {
+      "source": "sicdb",
+      "min_estimate": 0.14105916875993554,
+      "max_estimate": 0.1503449705988768,
+      "min_ci_low": 0.1256329562547193,
+      "min_people": 716
+    }
+  ],
+  "sicdb_time_shift_falsification": [
+    {
+      "shift_minutes": -5,
+      "people": 242,
+      "pairs": 11405,
+      "estimate": 0.2275708684790896,
+      "ci_low": 0.19677888390348128,
+      "ci_high": 0.2613207822281558,
+      "pair_weighted": 0.17290661990355108
+    },
+    {
+      "shift_minutes": -1,
+      "people": 81,
+      "pairs": 9152,
+      "estimate": 0.19899886400575736,
+      "ci_low": 0.1442307949633973,
+      "ci_high": 0.2587331878497889,
+      "pair_weighted": 0.16083916083916083
+    },
+    {
+      "shift_minutes": 1,
+      "people": 81,
+      "pairs": 9152,
+      "estimate": 0.15741184201282035,
+      "ci_low": 0.11334580460888724,
+      "ci_high": 0.20713162489521092,
+      "pair_weighted": 0.15865384615384615
+    },
+    {
+      "shift_minutes": 5,
+      "people": 242,
+      "pairs": 11405,
+      "estimate": 0.20426505170961223,
+      "ci_low": 0.17244899581032014,
+      "ci_high": 0.23725512475890392,
+      "pair_weighted": 0.164138535729943
+    }
+  ],
+  "between_person_stratified_permutation": {
+    "sicdb": {
+      "people": 1510,
+      "pairs": 30087,
+      "estimate": 0.17267006077659663,
+      "ci_low": 0.1653944485560293,
+      "ci_high": 0.1800903540357238,
+      "pair_weighted": 0.16588559843121614
+    },
+    "mimic_iv": {
+      "people": 4171,
+      "pairs": 33855,
+      "estimate": 0.1398888378846696,
+      "ci_low": 0.13527827733819048,
+      "ci_high": 0.14449021830615133,
+      "pair_weighted": 0.13847289912863683
+    },
+    "eicu": {
+      "people": 9017,
+      "pairs": 171016,
+      "estimate": 0.13183898455362822,
+      "ci_low": 0.12877893638963164,
+      "ci_high": 0.13489785746832306,
+      "pair_weighted": 0.12665481592365627
+    }
+  },
+  "primary_conclusion_preserved_across_range_and_timing": true,
+  "notes": [
+    "Minimum-pair 1 and full-stay sensitivities require separate all-pair extracts and are not represented by this primary-population file.",
+    "Permutation is stratified on broad arterial-MAP bands and is a falsification analysis, not a physiological null model."
+  ]
+}

@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this software or aggregate reproducibility package, please cite it using this metadata."
+title: "Blood-pressure label instability in critical care: reproducibility code and aggregate results"
+type: software
+authors:
+  - family-names: Jin
+    given-names: Chaoyuan
+  - family-names: Mu
+    given-names: Sucheng
+  - family-names: Dai
+    given-names: Qingxia
+  - family-names: Ren
+    given-names: Xingxing
+  - family-names: Shen
+    given-names: Jie
+    orcid: "https://orcid.org/0000-0003-2295-2603"
+version: 2.1.0
+date-released: 2026-08-13
+repository-code: "https://github.com/Jimmmmgh/blood-pressure-label-instability"
+url: "https://github.com/Jimmmmgh/blood-pressure-label-instability"
+license: MIT
+

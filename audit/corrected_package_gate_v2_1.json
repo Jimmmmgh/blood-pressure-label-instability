@@ -1,0 +1,114 @@
+{
+  "schema_version": "2.1",
+  "generated_at_utc": "2026-08-13T01:00:17.179766+00:00",
+  "manifest": {
+    "relative_path": "protocol/POST_ANALYSIS_CORRECTION_MANIFEST_v2.1.sha256.json",
+    "sha256": "4f813e9a960f2e17b74029adc5b5d5d66b2b79b37314b220b4e5226180c70326",
+    "files": 35
+  },
+  "historical_v2_manifest": {
+    "historical_manifest_sha256": "d34a4d45d02c2e5a50a233038a1047c91bd549bf761788468107ea6c546d94df",
+    "current_validation_pass": false,
+    "mismatches": [
+      {
+        "expected": {
+          "relative_path": "audit/cohort_flow/mimic_iv_flow_v1.json",
+          "bytes": 1126,
+          "sha256": "36ca72d86fa75ab7d34c481a21f0a5845b5d514119816764000e826db48f0bbc"
+        },
+        "observed": {
+          "relative_path": "audit/cohort_flow/mimic_iv_flow_v1.json",
+          "exists": true,
+          "bytes": 1118,
+          "sha256": "44c591cafdc9c58be4a022e714db199051288ee16c24584dab08ab9aa254e216"
+        }
+      }
+    ],
+    "expected_post_correction_mismatch_only": true,
+    "interpretation": "The historical v2.0 manifest remains immutable. Its current validation is expected to fail only for the corrected MIMIC-IV flow record; the v2.1 manifest records the post-result state and does not retroactively claim a pre-result freeze."
+  },
+  "age_correction": {
+    "people_with_changed_age": 1118,
+    "people_changing_age_stratum": 191,
+    "old_median_age": 65.0,
+    "corrected_median_age": 66.0,
+    "measurement_rows_identical": true,
+    "primary_ccd_exactly_unchanged": true
+  },
+  "primary": {
+    "sicdb": {
+      "people": 1510,
+      "pairs": 30087,
+      "ccd": 0.1503449705988768,
+      "exact_expected_match": true
+    },
+    "mimic_iv": {
+      "people": 4171,
+      "pairs": 33855,
+      "ccd": 0.1320241478534691,
+      "exact_expected_match": true
+    },
+    "eicu": {
+      "people": 9017,
+      "pairs": 171016,
+      "ccd": 0.13340164267159005,
+      "exact_expected_match": true
+    }
+  },
+  "eicu_multiple_imputation": {
+    "policies": 4,
+    "all_20_imputations": true,
+    "all_2000_bootstraps": true,
+    "bootstrap_failures_total": 0,
+    "all_intervals_include_zero": true
+  },
+  "remaining_prespecified_sensitivities": {
+    "analysis_cells": 9,
+    "ccd_min": 0.13096242745322367,
+    "ccd_max": 0.15353007869257956,
+    "all_above_5_percent_workflow_gate": true
+  },
+  "determinism": {
+    "status": "PASS",
+    "artifacts": 13
+  },
+  "unit_tests": {
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "...\n----------------------------------------------------------------------\nRan 3 tests in 0.021s\n\nOK\n"
+  },
+  "gates": {
+    "historical_manifest_mismatch_is_expected_and_documented": true,
+    "age_correction_audit": true,
+    "age_correction_preserved_measurement_rows": true,
+    "age_correction_preserved_primary_ccd": true,
+    "primary_counts_and_estimates": true,
+    "analysis_determinism": true,
+    "eicu_multiple_imputation": true,
+    "remaining_sensitivities_preserve_core_signal": true,
+    "measurement_boundary_unit_tests": true,
+    "vitaldb_waveform_gate_remains_no_go": true
+  },
+  "technical_analysis_pass": true,
+  "scientific_package_complete_for_coauthor_review": true,
+  "submission_ready": false,
+  "submitted": false,
+  "claim_boundary": {
+    "supported": "Cross-system transportability of measurement-source label instability.",
+    "not_supported": [
+      "Either sensor is universal ground truth",
+      "Controlled device accuracy or interchangeability",
+      "Causal mortality effect or sensor superiority",
+      "Raw-waveform external validation",
+      "Bedside deployment benefit"
+    ]
+  },
+  "submission_blockers": [
+    "Full authorship, affiliations, corresponding-author details, and ORCIDs",
+    "Institutional ethics or IRB determination and reference",
+    "Funding, competing interests, acknowledgements, and CRediT contributions",
+    "Human coauthor verification of all analyses, citations, figures, and AI disclosure",
+    "Repository/DOI and journal-portal decisions"
+  ],
+  "status": "PASS_WITH_SUBMISSION_BLOCKERS"
+}

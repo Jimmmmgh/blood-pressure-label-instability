@@ -1,0 +1,18 @@
+{
+  "release_version": "2.1.0",
+  "repository_target": "https://github.com/Jimmmmgh/blood-pressure-label-instability",
+  "row_level_data_included": false,
+  "patient_identifiers_included": false,
+  "credentials_included": false,
+  "local_absolute_paths_included": false,
+  "manuscript_files_included": false,
+  "safety_scan_findings": [],
+  "maximum_file_bytes": 1289950,
+  "excluded": [
+    "all patient-level and protected source data",
+    "identifiers, timestamps, outcomes, and row-level derived cohorts",
+    "credentials and database connection helpers",
+    "local paths and private audit ledgers",
+    "manuscript and journal-submission files"
+  ]
+}

@@ -1,0 +1,4 @@
+Source,People,Pairs,"CCD, % (95% CI)","Threshold discordance, %","Absolute cuff-arterial difference >=10 mmHg, %","Review/indeterminate, %","Mean bias, cuff-arterial, mmHg","Descriptive pair-level 95% dispersion limits, mmHg","Patients with >=10-point burden shift, %","Stable-policy coverage, %"
+SICdb,1510,30087,15.0 (14.0 to 16.1),24.1,38.3,47.3,-4.9,-48.1 to 38.3,54.2,52.7
+MIMIC-IV,4171,33855,13.2 (12.6 to 13.8),21.5,40.2,48.4,-5.2,-31.2 to 20.8,51.5,51.6
+eICU,9017,171016,13.3 (13.0 to 13.7),19.6,42.5,48.8,-2.1,-30.6 to 26.4,45.5,51.2

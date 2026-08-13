@@ -1,0 +1,6 @@
+failure_criterion,count,percent
+Out-of-range >5%,12766,50.341101778461294
+Amplitude >150 mmHg,8796,34.68591032769431
+Amplitude <10 mmHg,744,2.933869632083284
+Missing run >5 s,42,0.16562167277889506
+Flat adjacent ≥95%,0,0.0

@@ -1,0 +1,4 @@
+Source,Independent people,Paired observations,"Age, median (IQR), y","Female, n (%)","Unknown sex, n (%)","Pairs/person, median (IQR)",24-h landmark people,Subsequent hospital deaths
+SICdb,1510,30087,70 (60-80),715 (47.4%),0 (0.0%),8 (4-19),1208,111 (9.2%)
+MIMIC-IV,4171,33855,66 (55-76),1746 (41.9%),0 (0.0%),6 (4-11),3782,483 (12.8%)
+eICU,9017,171016,67 (56-76),3749 (41.6%),2 (0.0%),11 (4-25),7294,1072 (14.7%)

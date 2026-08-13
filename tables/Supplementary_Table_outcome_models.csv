@@ -1,0 +1,25 @@
+Source,Policy,Adjustment,People,Deaths,"AMRD per ~10-point burden increase, percentage points (95% CI)",AUROC,Brier score
+SICdb,Arterial only,Age/sex,1208,111,0.5 (-0.1 to 1.2),0.631,0.082
+SICdb,Arterial only,Age/sex + severity,1208,111,0.2 (-0.5 to 0.7),0.829,0.069
+SICdb,Cuff only,Age/sex,1208,111,1.2 (0.5 to 1.8),0.650,0.082
+SICdb,Cuff only,Age/sex + severity,1208,111,0.7 (0.2 to 1.3),0.834,0.069
+SICdb,Any sensor,Age/sex,1208,111,0.7 (0.2 to 1.1),0.638,0.082
+SICdb,Any sensor,Age/sex + severity,1208,111,0.4 (0.0 to 0.8),0.828,0.069
+SICdb,Concordant only,Age/sex,1118,103,1.5 (0.5 to 2.5),0.651,0.082
+SICdb,Concordant only,Age/sex + severity,1118,103,1.0 (0.2 to 1.9),0.832,0.068
+MIMIC-IV,Arterial only,Age/sex,3782,483,1.1 (0.4 to 1.8),0.615,0.109
+MIMIC-IV,Arterial only,Age/sex + severity,3782,483,-0.1 (-0.8 to 0.5),0.815,0.091
+MIMIC-IV,Cuff only,Age/sex,3782,483,1.0 (0.5 to 1.5),0.615,0.109
+MIMIC-IV,Cuff only,Age/sex + severity,3782,483,0.1 (-0.3 to 0.6),0.814,0.091
+MIMIC-IV,Any sensor,Age/sex,3782,483,0.6 (0.2 to 1.1),0.615,0.109
+MIMIC-IV,Any sensor,Age/sex + severity,3782,483,-0.2 (-0.6 to 0.2),0.815,0.091
+MIMIC-IV,Concordant only,Age/sex,3404,433,0.9 (-0.2 to 1.9),0.618,0.109
+MIMIC-IV,Concordant only,Age/sex + severity,3404,433,-0.1 (-1.0 to 0.8),0.819,0.091
+eICU,Arterial only,Age/sex,7292,1071,1.8 (1.2 to 2.4),0.596,0.123
+eICU,Arterial only,Age/sex + severity,6490,961,-0.2 (-0.7 to 0.3),0.828,0.097
+eICU,Cuff only,Age/sex,7292,1071,1.2 (0.6 to 1.8),0.578,0.124
+eICU,Cuff only,Age/sex + severity,6490,961,0.1 (-0.5 to 0.6),0.827,0.098
+eICU,Any sensor,Age/sex,7292,1071,1.2 (0.8 to 1.6),0.595,0.123
+eICU,Any sensor,Age/sex + severity,6490,961,-0.1 (-0.5 to 0.3),0.829,0.097
+eICU,Concordant only,Age/sex,6741,973,1.3 (0.2 to 2.3),0.576,0.122
+eICU,Concordant only,Age/sex + severity,5990,872,-0.4 (-1.3 to 0.6),0.827,0.096

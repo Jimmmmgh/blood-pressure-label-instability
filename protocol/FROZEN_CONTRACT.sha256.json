@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "frozen_at_utc": "2026-08-12T14:22:05.205399+00:00",
+  "state_at_freeze": "No project-level pressure-difference, CCD, clinical-outcome, or association analysis had been opened.",
+  "files": [
+    {
+      "relative_path": "protocol/PROTOCOL_v1.0.md",
+      "bytes": 13869,
+      "sha256": "1c74e164d8becaf765732035cd5a0999494d36534a9e920a14cf825018c96108"
+    },
+    {
+      "relative_path": "protocol/SAP_v1.0.md",
+      "bytes": 12567,
+      "sha256": "37418538df59a44183202acc8693c03618c9c352bdbd4011661fada6e1ab6b5d"
+    },
+    {
+      "relative_path": "protocol/VARIABLE_CONTRACT_v1.0.json",
+      "bytes": 3393,
+      "sha256": "4ff0be6aa35d522082f0ac2f04a048e09e5427d5f09bfb3afc4f03c492107606"
+    },
+    {
+      "relative_path": "protocol/OUTCOME_FIREWALL.md",
+      "bytes": 1938,
+      "sha256": "e55a762c5103bc10c4278353911ceee5f33174dbd803a4a88ffcd898de367afc"
+    },
+    {
+      "relative_path": "references/eligibility_protocol.md",
+      "bytes": 3188,
+      "sha256": "d042c104c3886eb646aa06ac086ad68d35c8060011a1f30decf5d9b0eb62d7e1"
+    },
+    {
+      "relative_path": "CANDIDATE_TOURNAMENT.md",
+      "bytes": 5570,
+      "sha256": "4ab5197aff2a8a410a37a430445ae3b065f5696cd66502e8767ef746749bdc1d"
+    }
+  ]
+}

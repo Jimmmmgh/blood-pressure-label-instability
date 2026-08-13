@@ -1,0 +1,193 @@
+{
+  "generated_at_utc": "2026-08-12T15:32:46.345416+00:00",
+  "outcomes_read": false,
+  "protocol_version": "2.0 pre-result restart",
+  "gates": {
+    "v2_manifest": false,
+    "classification_boundary_tests": true,
+    "capacity": true,
+    "primary_signal": true,
+    "core_qa_and_bootstrap_stability": true,
+    "range_and_timing_sensitivity": true,
+    "minimum_one_pair_and_full_stay_sensitivity": true,
+    "eicu_site_concentration": true,
+    "calendar_concentration": true
+  },
+  "measurement_gate_pass": false,
+  "flagship_viability_gate_pass": false,
+  "outcome_firewall_decision": "LOCKED",
+  "quality": {
+    "sicdb": {
+      "people": 1510,
+      "pairs": 30087,
+      "minimum_pairs": 3,
+      "nonfinite_or_out_of_range_rows": 0,
+      "outcome_columns_found": [],
+      "bootstrap_1000": [
+        0.1503449705988768,
+        0.1394458981119728,
+        0.1601139982491061
+      ],
+      "bootstrap_2000": [
+        0.1503449705988768,
+        0.14005626456714373,
+        0.16064217736141204
+      ],
+      "bootstrap_max_endpoint_difference": 0.0006103664551709298
+    },
+    "mimic_iv": {
+      "people": 4171,
+      "pairs": 33855,
+      "minimum_pairs": 3,
+      "nonfinite_or_out_of_range_rows": 0,
+      "outcome_columns_found": [],
+      "bootstrap_1000": [
+        0.1320241478534691,
+        0.126261064333335,
+        0.138124035197827
+      ],
+      "bootstrap_2000": [
+        0.1320241478534691,
+        0.12619009295498093,
+        0.13818598043687835
+      ],
+      "bootstrap_max_endpoint_difference": 7.09713783540733e-05
+    },
+    "eicu": {
+      "people": 9017,
+      "pairs": 171016,
+      "minimum_pairs": 3,
+      "nonfinite_or_out_of_range_rows": 0,
+      "outcome_columns_found": [],
+      "bootstrap_1000": [
+        0.13340164267159005,
+        0.12944498652257383,
+        0.13734213157560415
+      ],
+      "bootstrap_2000": [
+        0.13340164267159005,
+        0.12952071825649486,
+        0.13746222275031328
+      ],
+      "bootstrap_max_endpoint_difference": 0.00012009117470912489
+    }
+  },
+  "calendar_diagnostics": {
+    "sicdb": {
+      "missing_year_people": 0,
+      "year_strata": [
+        {
+          "calendar_year": 2013,
+          "people": 142,
+          "mean_ccd_fraction": 0.14691231047102518
+        },
+        {
+          "calendar_year": 2014,
+          "people": 197,
+          "mean_ccd_fraction": 0.15159134928686316
+        },
+        {
+          "calendar_year": 2015,
+          "people": 193,
+          "mean_ccd_fraction": 0.1487665438853214
+        },
+        {
+          "calendar_year": 2016,
+          "people": 178,
+          "mean_ccd_fraction": 0.15488085475221897
+        },
+        {
+          "calendar_year": 2017,
+          "people": 157,
+          "mean_ccd_fraction": 0.14398234257261863
+        },
+        {
+          "calendar_year": 2018,
+          "people": 174,
+          "mean_ccd_fraction": 0.16063592461081955
+        },
+        {
+          "calendar_year": 2019,
+          "people": 155,
+          "mean_ccd_fraction": 0.13917936181623178
+        },
+        {
+          "calendar_year": 2020,
+          "people": 170,
+          "mean_ccd_fraction": 0.14726919604898353
+        },
+        {
+          "calendar_year": 2021,
+          "people": 144,
+          "mean_ccd_fraction": 0.1586853021952604
+        }
+      ],
+      "largest_year_fraction": 0.1304635761589404,
+      "year_specific_ccd_range": [
+        0.13917936181623178,
+        0.16063592461081955
+      ],
+      "leave_one_year_out_range": [
+        0.14900468167815972,
+        0.15162221735999118
+      ]
+    },
+    "mimic_iv": {
+      "status": "not_interpretable",
+      "reason": "MIMIC-IV dates are shifted independently by patient; displayed years cannot define a between-person calendar stratum. Calendar heterogeneity is therefore not claimed for this source."
+    },
+    "eicu": {
+      "missing_year_people": 0,
+      "year_strata": [
+        {
+          "calendar_year": 2014,
+          "people": 4401,
+          "mean_ccd_fraction": 0.13694798593060362
+        },
+        {
+          "calendar_year": 2015,
+          "people": 4616,
+          "mean_ccd_fraction": 0.13002047787893015
+        }
+      ],
+      "largest_year_fraction": 0.5119219252523012,
+      "year_specific_ccd_range": [
+        0.13002047787893015,
+        0.13694798593060362
+      ],
+      "leave_one_year_out_range": [
+        0.13002047787893017,
+        0.13694798593060364
+      ]
+    }
+  },
+  "eicu_site_diagnostics": {
+    "all_hospitals": 168,
+    "hospitals_with_at_least_50_people": 58,
+    "largest_hospital_people": 392,
+    "largest_hospital_fraction_of_people": 0.04347343905955418,
+    "eligible_hospital_ccd_range": [
+      0.04160942027101445,
+      0.21052705795062035
+    ],
+    "leave_one_hospital_out_overall_range": [
+      0.13185188003244805,
+      0.13467284924229703
+    ]
+  },
+  "manifest_failures": [
+    {
+      "expected": {
+        "relative_path": "audit/cohort_flow/mimic_iv_flow_v1.json",
+        "bytes": 1126,
+        "sha256": "36ca72d86fa75ab7d34c481a21f0a5845b5d514119816764000e826db48f0bbc"
+      },
+      "observed": {
+        "relative_path": "audit/cohort_flow/mimic_iv_flow_v1.json",
+        "bytes": 1118,
+        "sha256": "44c591cafdc9c58be4a022e714db199051288ee16c24584dab08ab9aa254e216"
+      }
+    }
+  ],
+  "implementation_deviation": "Calendar-year fields were omitted from VARIABLE_CONTRACT_v1.0 despite calendar heterogeneity being prespecified in the protocol. Only deidentified year was read for this gate; it was not used to alter the cohort or estimand."
+}

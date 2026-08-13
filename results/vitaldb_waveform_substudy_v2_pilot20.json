@@ -1,0 +1,24 @@
+{
+  "generated_at_utc": "2026-08-12T14:45:16.903221+00:00",
+  "role": "selected raw-waveform technical substudy; not prevalence cohort",
+  "tasks": 20,
+  "load_success": 20,
+  "load_error": 0,
+  "triplet_aligned_cases": 19,
+  "cases_with_any_plausible_state_change": 17,
+  "plausible_state_change_episodes": 362,
+  "coverage_eligible_windows": 361,
+  "cases_with_at_least_three_coverage_eligible_windows": 16,
+  "waveform_quality_pass_windows": 257,
+  "quality_pass_fraction_among_coverage_eligible": 0.7119113573407202,
+  "numeric_waveform_concordant_windows": 224,
+  "technical_subset_windows": 217,
+  "technical_subset_people": 11,
+  "selected_equal_person_ccd_fraction": {
+    "estimate": 0.014931592471699423,
+    "ci_low": 0.0,
+    "ci_high": 0.04090561844572539
+  },
+  "raw_waveform_gate_pass": false,
+  "selection_warning": "Cuff updates are inferred only when at least one carried-forward NIBP value changes; identical consecutive cuff results are unobservable."
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": "2.0",
+  "frozen_at_utc": "2026-08-12T14:27:59.999242+00:00",
+  "pre_result_attestation": "Only eligibility and flow counts were inspected. No aggregate pressure difference, CCD, clinical outcome, or association was calculated or inspected.",
+  "files": [
+    {
+      "relative_path": "protocol/FROZEN_CONTRACT.sha256.json",
+      "bytes": 1297,
+      "sha256": "db1028a89b2902bcf25a1b042eb844c7317ff09cd3ef3941d968a974894674fb"
+    },
+    {
+      "relative_path": "protocol/PROTOCOL_v1.0.md",
+      "bytes": 13869,
+      "sha256": "1c74e164d8becaf765732035cd5a0999494d36534a9e920a14cf825018c96108"
+    },
+    {
+      "relative_path": "protocol/SAP_v1.0.md",
+      "bytes": 12567,
+      "sha256": "37418538df59a44183202acc8693c03618c9c352bdbd4011661fada6e1ab6b5d"
+    },
+    {
+      "relative_path": "protocol/VARIABLE_CONTRACT_v1.0.json",
+      "bytes": 3393,
+      "sha256": "4ff0be6aa35d522082f0ac2f04a048e09e5427d5f09bfb3afc4f03c492107606"
+    },
+    {
+      "relative_path": "protocol/OUTCOME_FIREWALL.md",
+      "bytes": 1938,
+      "sha256": "e55a762c5103bc10c4278353911ceee5f33174dbd803a4a88ffcd898de367afc"
+    },
+    {
+      "relative_path": "protocol/PROTOCOL_v2.0_PRE_RESULT_RESTART.md",
+      "bytes": 2754,
+      "sha256": "f2f5045a074c65f19dacf59a7cfe6372187ab322f7f408b09655ec18c3a1711a"
+    },
+    {
+      "relative_path": "references/eligibility_protocol.md",
+      "bytes": 3188,
+      "sha256": "d042c104c3886eb646aa06ac086ad68d35c8060011a1f30decf5d9b0eb62d7e1"
+    },
+    {
+      "relative_path": "CANDIDATE_TOURNAMENT.md",
+      "bytes": 5570,
+      "sha256": "4ab5197aff2a8a410a37a430445ae3b065f5696cd66502e8767ef746749bdc1d"
+    },
+    {
+      "relative_path": "audit/cohort_flow/sicdb_flow_v1.json",
+      "bytes": 1378,
+      "sha256": "6a6a3f60f6f1f039e8dc75acd649df9bf48dce64bebd1a13e6341d63f3949901"
+    },
+    {
+      "relative_path": "audit/cohort_flow/mimic_iv_flow_v1.json",
+      "bytes": 1126,
+      "sha256": "36ca72d86fa75ab7d34c481a21f0a5845b5d514119816764000e826db48f0bbc"
+    },
+    {
+      "relative_path": "audit/cohort_flow/eicu_flow_v1.json",
+      "bytes": 1268,
+      "sha256": "7baa8c123329e1b51c37f54c63f6b8f270208222f585acfcf086b3424f41e121"
+    }
+  ]
+}

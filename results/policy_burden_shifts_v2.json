@@ -1,0 +1,48 @@
+{
+  "generated_at_utc": "2026-08-13T00:54:20.671281+00:00",
+  "outcomes_read": false,
+  "sources": {
+    "sicdb": {
+      "people": 1510,
+      "mean_burden_delta": 0.005986646853886417,
+      "mean_burden_delta_ci_low": -0.009591029520874744,
+      "mean_burden_delta_ci_high": 0.021478705688219094,
+      "median_burden_delta": 0.0,
+      "people_absolute_burden_shift_at_least_010": 819,
+      "fraction_absolute_burden_shift_at_least_010": 0.5423841059602649,
+      "fraction_cuff_higher_by_at_least_010": 0.276158940397351,
+      "fraction_arterial_higher_by_at_least_010": 0.2662251655629139,
+      "stable_coverage": 0.5267653189060095,
+      "stable_coverage_ci_low": 0.5120989789558185,
+      "stable_coverage_ci_high": 0.5425491910245186
+    },
+    "mimic_iv": {
+      "people": 4171,
+      "mean_burden_delta": 0.08252377040501394,
+      "mean_burden_delta_ci_low": 0.07390923543626957,
+      "mean_burden_delta_ci_high": 0.09080038813413345,
+      "median_burden_delta": 0.0,
+      "people_absolute_burden_shift_at_least_010": 2146,
+      "fraction_absolute_burden_shift_at_least_010": 0.5145049148885159,
+      "fraction_cuff_higher_by_at_least_010": 0.3641812514984416,
+      "fraction_arterial_higher_by_at_least_010": 0.15032366339007433,
+      "stable_coverage": 0.5156869978646083,
+      "stable_coverage_ci_low": 0.5066644061579807,
+      "stable_coverage_ci_high": 0.5244274897959694
+    },
+    "eicu": {
+      "people": 9017,
+      "mean_burden_delta": 0.01161181159713908,
+      "mean_burden_delta_ci_low": 0.005948529828955597,
+      "mean_burden_delta_ci_high": 0.01726417616038142,
+      "median_burden_delta": 0.0,
+      "people_absolute_burden_shift_at_least_010": 4103,
+      "fraction_absolute_burden_shift_at_least_010": 0.4550293889320173,
+      "fraction_cuff_higher_by_at_least_010": 0.2477542419873572,
+      "fraction_arterial_higher_by_at_least_010": 0.2072751469446601,
+      "stable_coverage": 0.5122628132683172,
+      "stable_coverage_ci_low": 0.5065438483302986,
+      "stable_coverage_ci_high": 0.5181387377494935
+    }
+  }
+}
