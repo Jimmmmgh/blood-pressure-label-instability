@@ -40,10 +40,10 @@ efe47508a633f45e393e18ba59d2749cade66a5e09a5ab0e2a0a9b263bc4dd0d        8065  pr
 f2f5045a074c65f19dacf59a7cfe6372187ab322f7f408b09655ec18c3a1711a        2754  protocol/PROTOCOL_v2.0_PRE_RESULT_RESTART.md
 37418538df59a44183202acc8693c03618c9c352bdbd4011661fada6e1ab6b5d       12567  protocol/SAP_v1.0.md
 4ff0be6aa35d522082f0ac2f04a048e09e5427d5f09bfb3afc4f03c492107606        3393  protocol/VARIABLE_CONTRACT_v1.0.json
-f2924d2c3ee4bdee6d4c699e27e5e3402eb3cc9078dea57b8370b370ff237133        3873  README.md
-5a6ea9a495c3816c3dd4c0d1be7d59429635547f2e39e7a3c677d574abae1ba3       12250  references/manuscript_references.bib
-9fc898a02d3110a570971eed0356a793cc606026dbac2b239f8bb2c171ea842d       17144  references/manuscript_references.json
-9634906969ef185ca51673e1fdaa83a1caf4d3e6bf9fbe8d30ec864eb2cf8eea        6302  references/manuscript_references_vancouver.md
+5451978aaf61af96ae19697293d7447d1de36519008a4950ee6145668fa32801        3828  README.md
+70e0db10dd0962f20222eb2c48dbd8855f8ebf818b93cc8f096383b7c9a7470a       12508  references/manuscript_references.bib
+94bfe10847127af7f177587b707aac290fad65beb0c79cdc3e76c8ce355ad7ca       17747  references/manuscript_references.json
+c176078eb2e4fb135301ef9a731762774931f5b075dfdf96bb4658d1e8d33eca        6371  references/manuscript_references_vancouver.md
 c51a29abc9df63c794082b481efccfe68fc2f2623a7d0606c2defe3555192ffc         987  RELEASE_NOTES.md
 48e7dc58bee3dea1f2ad4cf05d38d1e911b9c54672312bd72f5cce1ff4f61d5d         156  requirements-lock.txt
 f33539c0635abde28560757494bb611e41f08fbd100d9e1cec5a97fe0af9f715        5289  results/eicu_multiple_imputation_outcome_sensitivity_v2_1.json
@@ -66,8 +66,8 @@ ae1cd263be10450d62f1f7f383b1e6f9e01b5370391db54583e0e73bd1d6b737       11285  sc
 c00fff7267ca1c9b1c4176bef6ea74e967fed70df777b3eb853e906b2406fcc0       10534  scripts/audit_measurement_gates.py
 6e3cec1cee4ceb8c10d3feb86d3618565d32616baf22c31d554bde333648269a        1440  scripts/build_manuscript.py
 aa3cd5a4b7b7e1cf3038ce1337f3b50ba3f69830d91eee38b2b67aa920c93c3f        8766  scripts/build_manuscript_tables.py
-d91788ce3d3aa2148e9cb3ac76cff251ac54b32b1021c50a335fbf4669b33bfd       15768  scripts/build_submission_docx.js
-1481f184f701318f33c5522e041b3ecfa3ab9723ab3f70322deb1c7cb734d2a2       26486  scripts/build_supplement.py
+d0037d535234dd296d67f544963fbe142aa238b8a31695c0d7ede6e802a3bc7d       16171  scripts/build_submission_docx.js
+92e80085c742ef5e68ef526ff7b6e17f4d500408f0861652c41fc99b6a7636f5       26508  scripts/build_supplement.py
 6e80a50f3144cf13c07c6a93344c7342752fcc5807fdcb725b432bf571caea11       21272  scripts/create_publication_figures.py
 e4882dd7faef5633deb202e759380cea1f1c5893f513a1d5212d49b4aad9f966        4661  scripts/measurement_core.py
 e8dbdb377f3b2504e60340234c67d4ec1528644ce113482978dc7356e6bea01d        7320  scripts/run_measurement_sensitivities.py

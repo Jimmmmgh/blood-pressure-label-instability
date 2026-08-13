@@ -25,5 +25,5 @@
 23. Johnson A, Bulgarelli L, Pollard T, Gow B, Moody B, Horng S, et al. MIMIC-IV. PhysioNet. 2024. Version 3.1; RRID:SCR_007345. https://doi.org/10.13026/kpb9-mt58.
 24. Pollard T, Johnson A, Raffa J, Celi LA, Mark RG, Badawi O. eICU Collaborative Research Database. PhysioNet. 2019. Version 2.0; RRID:SCR_007345. https://doi.org/10.13026/C2WM1R.
 25. Lee HC, Jung CW. VitalDB, a high-fidelity multi-parameter vital signs database in surgical patients. PhysioNet. 2022. Version 1.0.0; RRID:SCR_007345. https://doi.org/10.13026/czw8-9p62.
-26. MIT Laboratory for Computational Physiology. eICU-CRD vitalPeriodic table. eICU Collaborative Research Database documentation. 2026. Accessed 2026-08-12. https://eicu.mit.edu/eicutables/vitalperiodic/.
-27. MIT Laboratory for Computational Physiology. eICU-CRD vitalAperiodic table. eICU Collaborative Research Database documentation. 2026. Accessed 2026-08-12. https://eicu.mit.edu/eicutables/vitalaperiodic/.
+26. MIT Laboratory for Computational Physiology. eICU-CRD vitalPeriodic table. eICU Collaborative Research Database documentation [Internet]. [cited 2026 Aug 12]. Available from: https://eicu.mit.edu/eicutables/vitalperiodic/.
+27. MIT Laboratory for Computational Physiology. eICU-CRD vitalAperiodic table. eICU Collaborative Research Database documentation [Internet]. [cited 2026 Aug 12]. Available from: https://eicu.mit.edu/eicutables/vitalaperiodic/.

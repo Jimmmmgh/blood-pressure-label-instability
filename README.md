@@ -2,7 +2,7 @@
 
 This repository contains the disclosure-screened reproducibility materials for:
 
-> Blood pressure is not a single label: a cross-database retrospective measurement-method study of hypotension phenotype instability in critical care
+> Measurement-source instability of ICU hypotension phenotypes: a cross-database retrospective measurement-method study
 
 Authors: Chaoyuan Jin, Sucheng Mu, Qingxia Dai, Xingxing Ren, and Jie Shen.
 
@@ -22,7 +22,7 @@ SICdb 1.0.8, MIMIC-IV 3.1, eICU-CRD 2.0, and VitalDB 1.0.0 are available through
 
 ## Main finding and inference boundary
 
-Across 14,698 people and 234,958 paired observations, selecting arterial or oscillometric cuff mean arterial pressure changed a clinically consequential hypotension label in approximately 13%-15% of equal-person-weighted observations. The work establishes retrospective phenotype instability. It does not determine which modality is correct, certify device accuracy, identify a causal effect, or demonstrate deployment benefit.
+Across 14,698 people and 234,958 paired observations, arterial- and cuff-specific definitions yielded different clinically consequential hypotension labels in approximately 13%-15% of equal-person-weighted observations. The work establishes retrospective phenotype instability. It does not determine which modality is correct, certify device accuracy, identify a causal effect, or demonstrate deployment benefit.
 
 ## Reproduction
 

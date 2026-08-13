@@ -196,14 +196,14 @@ def main() -> None:
         ["2-3", "Background and objectives", "Background; final paragraph states four aims"],
         ["4", "Study design", "Methods: Study design, protocol, and reporting"],
         ["5", "Setting", "Methods: Data sources and roles"],
-        ["6", "Participants", "Methods: Population and pairing; Figure 2A"],
+        ["6", "Participants", "Methods: Population and pairing; Results: Cohort construction; Table 1"],
         ["7", "Variables", "Methods: Measurement states and estimands; protocol variable contract"],
         ["8", "Data sources/measurement", "Methods: Data sources and roles; Supplementary Methods S1"],
         ["9", "Bias", "Methods: symmetric event, equal-person estimand, outcome firewall; Discussion: Limitations"],
         ["10", "Study size", "Methods: protocol restart and census design; Supplementary Methods S2"],
         ["11", "Quantitative variables", "Methods: thresholds, burdens, splines, and sensitivity ranges"],
         ["12", "Statistical methods", "Methods: uncertainty, heterogeneity, sensitivity, and outcome analyses"],
-        ["13", "Participant flow", "Results: Cohort construction; Figure 2A"],
+        ["13", "Participant flow", "Results: Cohort construction; Table 1"],
         ["14", "Descriptive data", "Table 1"],
         ["15", "Outcome data", "Results: Outcome association sensitivity; Table 3"],
         ["16", "Main results", "Results: Primary measurement findings; Tables 2-3"],
@@ -217,7 +217,7 @@ def main() -> None:
 
     text = f"""# Supplementary material
 
-## Blood pressure is not a single label: a cross-database retrospective measurement-method study of hypotension phenotype instability in critical care
+## Measurement-source instability of ICU hypotension phenotypes: a cross-database retrospective measurement-method study
 
 **Authors:** Chaoyuan Jin, Sucheng Mu, Qingxia Dai, Xingxing Ren, and Jie Shen  
 **Equal contribution:** Chaoyuan Jin, Sucheng Mu, and Qingxia Dai contributed equally.  
@@ -236,8 +236,8 @@ This supplement accompanies the main manuscript. It preserves source-specific ac
 | Source | Role | Arterial MAP | Cuff MAP | Primary alignment | Important interpretation boundary |
 | --- | --- | --- | --- | --- | --- |
 | SICdb 1.0.8 | Anchor | DataID 703, 60 float32 minute values per hourly blob | DataID 706, same serialization | Exact reconstructed minute | Routine-care values; not synchronized device-validation measurements |
-| MIMIC-IV 3.1 | Single-center external validation | itemid 220052 | itemid 220181 | Exact charttime after within-modality median duplicate reduction | Equal charttime is an alignment proxy; age at ICU admission uses anchor_age + year(intime) - anchor_year |
-| eICU-CRD 2.0 | Multicenter external validation | vitalperiodic.systemicmean, stored as a five-minute median | vitalaperiodic.noninvasivemean, irregular event | Exact patient-stay offset | Nominal offset does not make the underlying acquisition mechanisms identical |
+| MIMIC-IV 3.1 | Single-center replication | itemid 220052 | itemid 220181 | Exact charttime after within-modality median duplicate reduction | Equal charttime is an alignment proxy; age at ICU admission uses anchor_age + year(intime) - anchor_year |
+| eICU-CRD 2.0 | Multicenter replication | vitalperiodic.systemicmean, stored as a five-minute median | vitalaperiodic.noninvasivemean, irregular event | Exact patient-stay offset | Nominal offset does not make the underlying acquisition mechanisms identical |
 | VitalDB 1.0.0 | Raw-waveform technical substudy | SNUADC/ART raw waveform plus Solar8000/ART_MBP numeric | State changes in the NIBP systolic/diastolic/MAP triplet | 60-second waveform window around a plausible cuff update | Identical repeated cuff states are unobservable; the quality gate failed |
 | INSPIRE 1.4.2 | Quantization capacity stress | Public quantized MAP category | Public quantized MAP category | Non-overlapping operating-room bins | Category boundaries were not locally verified; continuous mmHg inference was prohibited |
 
@@ -258,7 +258,7 @@ Within each source, both modalities had to lie between 20 and 200 mmHg. The firs
 
 ## Supplementary Methods S3. Outcome firewall and modeling
 
-Outcome fields were physically absent from measurement-stage extracts. The firewall was released only after frozen hashes, deterministic boundary tests, capacity and signal gates, finite-value checks, bootstrap stability, sensitivity preservation, eICU site concentration, and interpretable calendar concentration all passed. Outcome models began at a 24-hour ICU landmark and modeled subsequent in-hospital mortality. Each source-policy combination used logistic regression with a restricted cubic spline for first-day hypotension burden. Common adjustment was age and sex; sensitivity models added SAPS 3, APS III, or APACHE IVa. Reported marginal risk differences are standardized associations and are not causal effects.
+Outcome fields were physically absent from measurement-stage extracts. The firewall was released only after frozen hashes, deterministic boundary tests, capacity and signal gates, finite-value checks, bootstrap stability, sensitivity preservation, eICU site concentration, and interpretable calendar concentration all passed. Outcome models began at a 24-hour ICU landmark and modeled subsequent in-hospital mortality. Each source-policy combination used logistic regression with a natural cubic regression spline for first-day hypotension burden with three degrees of freedom. Common adjustment was age and sex; sensitivity models added SAPS 3, APS III, or APACHE IVa. Reported marginal risk differences are standardized associations and are not causal effects.
 
 APACHE IVa was missing for 802 of 7,292 eICU participants in common-adjustment models. The version 2.1 missing-data sensitivity used 20 posterior Bayesian-ridge chained-equation imputations. The imputation model included subsequent mortality, age, sex, policy-specific burden, number of pairs, CCD, arterial-only burden, cuff-only burden, any-sensor burden, and stable-policy coverage. Each imputed dataset used 2,000 patient-bootstrap resamples; estimates were combined with Rubin's rules. Across four policies, 160,000 bootstrap model fits completed without failure. This sensitivity did not impute MAP, timestamps, modality, pair membership, sex, or outcome.
 
@@ -300,7 +300,7 @@ AMRD is the standardized average marginal risk difference for adding 0.10 to eac
 
 {md_table(["Policy", "People", "APACHE IVa missing", "Imputations x bootstraps", "MI AMRD, percentage points (95% CI)", "Complete-case AMRD", "MI minus complete-case"], mi_table)}
 
-The multiple-imputation estimates were close to the complete-case estimates and all intervals included zero. Rubin-rule intervals include both within- and between-imputation uncertainty. The analysis is a missing-data sensitivity, not a causal model or an external validation.
+The multiple-imputation estimates were close to the complete-case estimates and all intervals included zero. Rubin-rule intervals include both within- and between-imputation uncertainty. The analysis is a missing-data sensitivity, not a causal model or an independent replication.
 
 ## Supplementary Table S8. VitalDB raw-waveform gate
 

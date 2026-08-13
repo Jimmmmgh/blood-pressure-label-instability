@@ -594,8 +594,8 @@
       ],
       "title": "eICU-CRD vitalPeriodic table",
       "journal": "eICU Collaborative Research Database documentation",
-      "year": "2026",
-      "note": "Accessed 2026-08-12",
+      "year": null,
+      "note": "Cited 2026 Aug 12",
       "url": "https://eicu.mit.edu/eicutables/vitalperiodic/",
       "type": "web"
     },
@@ -606,8 +606,8 @@
       ],
       "title": "eICU-CRD vitalAperiodic table",
       "journal": "eICU Collaborative Research Database documentation",
-      "year": "2026",
-      "note": "Accessed 2026-08-12",
+      "year": null,
+      "note": "Cited 2026 Aug 12",
       "url": "https://eicu.mit.edu/eicutables/vitalaperiodic/",
       "type": "web"
     }
