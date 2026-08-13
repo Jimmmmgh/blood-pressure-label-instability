@@ -5,7 +5,6 @@ const {
   BorderStyle,
   Document,
   Footer,
-  Header,
   HeadingLevel,
   ImageRun,
   LevelFormat,
@@ -153,6 +152,7 @@ function parseMarkdown(markdown, config) {
   const blocks = [];
   let numberList = 0;
   let inCode = false;
+  let lastTableWide = false;
   for (let i = 0; i < lines.length;) {
     const line = lines[i];
     const trimmed = line.trim();
@@ -174,6 +174,7 @@ function parseMarkdown(markdown, config) {
       const parsed = parseTable(lines, i);
       const wide = parsed.data[0].length >= config.wideColumns;
       blocks.push({ kind: "table", data: parsed.data, wide });
+      lastTableWide = wide;
       i = parsed.next;
       continue;
     }
@@ -201,23 +202,37 @@ function parseMarkdown(markdown, config) {
     }
     const bullet = trimmed.match(/^-\s+(.+)$/);
     if (bullet) {
-      blocks.push({ node: paragraph(bullet[1], { alignment: AlignmentType.LEFT, numbering: { reference: "bullets", level: 0 }, spacing: config.compact ? { after: 35, line: 250 } : { after: 80, line: 320 }, run: config.compact ? { size: 20 } : {} }), wide: false });
+      blocks.push({ node: paragraph(bullet[1], { alignment: AlignmentType.LEFT, numbering: { reference: "bullets", level: 0 }, spacing: config.compact ? { after: 20, line: 230 } : { after: 80, line: 320 }, run: config.compact ? { size: 20 } : {} }), wide: false });
       i += 1;
       continue;
     }
     const numbered = trimmed.match(/^\d+\.\s+(.+)$/);
     if (numbered) {
       if (i === 0 || !lines[i - 1].trim().match(/^\d+\.\s+/)) numberList += 1;
-      blocks.push({ node: paragraph(numbered[1], { alignment: AlignmentType.LEFT, numbering: { reference: `numbers-${numberList}`, level: 0 }, spacing: config.compact ? { after: 35, line: 250 } : { after: 80, line: 320 }, run: config.compact ? { size: 20 } : {} }), wide: false });
+      blocks.push({ node: paragraph(numbered[1], { alignment: AlignmentType.LEFT, numbering: { reference: `numbers-${numberList}`, level: 0 }, spacing: config.compact ? { after: 20, line: 230 } : { after: 80, line: 320 }, run: config.compact ? { size: 20 } : {} }), wide: false });
+      i += 1;
+      continue;
+    }
+    if (/^\*\*Table \d+\.[^*]+\*\*$/.test(trimmed)) {
+      let next = i + 1;
+      while (next < lines.length && !lines[next].trim()) next += 1;
+      const nextTable = next < lines.length && lines[next].trim().startsWith("|") ? parseTable(lines, next) : null;
+      const wide = nextTable ? nextTable.data[0].length >= config.wideColumns : false;
+      blocks.push({ node: paragraph(trimmed, { alignment: AlignmentType.LEFT, keepNext: true }), wide });
+      i += 1;
+      continue;
+    }
+    if (/^\*\*Table \d+ legend\.\*\*/.test(trimmed)) {
+      blocks.push({ node: paragraph(trimmed, { alignment: AlignmentType.LEFT }), wide: lastTableWide });
       i += 1;
       continue;
     }
     if (/^\*\*[^*]+:\*\*/.test(trimmed)) {
-      blocks.push({ node: paragraph(trimmed, { alignment: AlignmentType.LEFT, keepNext: true, spacing: config.compact ? { after: 40, line: 250 } : undefined, run: config.compact ? { size: 20 } : {} }), wide: false });
+      blocks.push({ node: paragraph(trimmed, { alignment: AlignmentType.LEFT, keepNext: true, spacing: config.compact ? { after: 20, line: 230 } : undefined, run: config.compact ? { size: 20 } : {} }), wide: false });
       i += 1;
       continue;
     }
-    blocks.push({ node: paragraph(trimmed, config.compact ? { spacing: { after: 55, line: 250 }, run: { size: 20 } } : {}), wide: false });
+    blocks.push({ node: paragraph(trimmed, config.compact ? { spacing: { after: 30, line: 230 }, run: { size: 20 } } : {}), wide: false });
     i += 1;
   }
   return { blocks, numberList };
@@ -229,26 +244,19 @@ function sectionProperties(landscape, lineNumbers, compact) {
   return {
     page: {
       size: { width: A4.width, height: A4.height, orientation: landscape ? PageOrientation.LANDSCAPE : PageOrientation.PORTRAIT },
-      margin: { top: margin, right: margin, bottom: margin, left: margin, header: 540, footer: 540 },
+      margin: { top: margin, right: margin, bottom: margin, left: margin, header: 0, footer: 540 },
     },
     lineNumbers: lineNumbers ? { countBy: 1, start: 1, restart: LineNumberRestartFormat.CONTINUOUS, distance: 360 } : undefined,
   };
 }
 
 
-function headerFooter(label, plainJournal = false) {
+function footerOnly() {
   return {
-    headers: {
-      default: new Header({ children: [new Paragraph({
-        alignment: AlignmentType.RIGHT,
-        border: plainJournal ? undefined : { bottom: { style: BorderStyle.SINGLE, size: 6, color: BLUE, space: 1 } },
-        children: [new TextRun({ text: label, size: 16, color: plainJournal ? "000000" : NAVY })],
-      })] }),
-    },
     footers: {
       default: new Footer({ children: [new Paragraph({
-        alignment: AlignmentType.RIGHT,
-        children: [new TextRun({ text: "Page ", size: 16 }), new TextRun({ children: [PageNumber.CURRENT], size: 16 })],
+        alignment: AlignmentType.CENTER,
+        children: [new TextRun({ children: [PageNumber.CURRENT], size: 16 })],
       })] }),
     },
   };
@@ -261,10 +269,9 @@ function makeSections(blocks, config) {
   let children = [];
   const flush = () => {
     if (!children.length) return;
-    const hf = headerFooter(config.header, config.plainJournal);
+    const hf = footerOnly();
     sections.push({
       properties: sectionProperties(currentWide, config.lineNumbers, config.compact),
-      headers: hf.headers,
       footers: hf.footers,
       children,
     });
@@ -320,32 +327,44 @@ function numbering(numberList) {
 }
 
 
-function figureBlocks() {
+function figureBlocks(markdown) {
   const files = [
-    ["Figure 1. Graphical abstract", "Figure_1_graphical_abstract.png"],
-    ["Figure 2. Cohort flow and measurement instability", "Figure_2_measurement_instability.png"],
-    ["Figure 3. Robustness and eICU heterogeneity", "Figure_3_robustness.png"],
-    ["Figure 4. Outcome association sensitivity", "Figure_4_outcome_sensitivity.png"],
-    ["Figure 5. VitalDB raw-waveform No-Go", "Figure_5_vitaldb_waveform_no_go.png"],
+    [1, "Figure_1_graphical_abstract.png"],
+    [2, "Figure_2_measurement_instability.png"],
+    [3, "Figure_3_robustness.png"],
+    [4, "Figure_4_outcome_sensitivity.png"],
+    [5, "Figure_5_vitaldb_waveform_no_go.png"],
   ];
-  const blocks = [{
-    node: new Paragraph({ heading: HeadingLevel.HEADING_1, pageBreakBefore: true, children: [new TextRun("Embedded figures for review")] }),
-    wide: true,
-  }];
-  for (const [title, file] of files) {
+  const lines = markdown.replace(/\r/g, "").split("\n");
+  const legends = new Map();
+  for (let i = 0; i < lines.length; i += 1) {
+    const match = lines[i].trim().match(/^### Figure (\d+)\.\s+(.+)$/);
+    if (!match) continue;
+    let next = i + 1;
+    while (next < lines.length && !lines[next].trim()) next += 1;
+    legends.set(Number(match[1]), `Figure ${match[1]}. ${match[2]}. ${lines[next].trim()}`);
+  }
+  const blocks = [];
+  for (const [number, file] of files) {
     const full = path.join(ROOT, "figures", file);
     const isWide = file.startsWith("Figure_1");
-    const width = isWide ? 900 : 720;
+    const width = isWide ? 860 : 660;
     const sourceRatio = isWide ? 716 / 2195 : file.includes("Figure_2") ? 3310 / 4389 : file.includes("Figure_3") ? 3070 / 4384 : file.includes("Figure_4") ? 3069 / 4389 : 2590 / 4389;
-    blocks.push({ node: new Paragraph({ alignment: AlignmentType.CENTER, pageBreakBefore: title !== files[0][0], keepNext: true, children: [new TextRun({ text: title, bold: true, size: 20, color: NAVY })] }), wide: true });
     blocks.push({ node: new Paragraph({
       alignment: AlignmentType.CENTER,
+      pageBreakBefore: true,
+      keepNext: true,
       children: [new ImageRun({
         type: "png",
         data: fs.readFileSync(full),
         transformation: { width, height: Math.round(width * sourceRatio) },
-        altText: { title, description: title, name: file },
+        altText: { title: `Figure ${number}`, description: legends.get(number) || `Figure ${number}`, name: file },
       })],
+    }), wide: true });
+    blocks.push({ node: paragraph(legends.get(number) || `Figure ${number}.`, {
+      alignment: AlignmentType.JUSTIFIED,
+      spacing: { before: 80, after: 120, line: 240 },
+      run: { size: 18 },
     }), wide: true });
   }
   return blocks;
@@ -354,8 +373,11 @@ function figureBlocks() {
 
 async function build(markdownFile, outputFile, config) {
   const md = fs.readFileSync(markdownFile, "utf8");
-  const parsed = parseMarkdown(md, config);
-  const blocks = config.includeFigures ? parsed.blocks.concat(figureBlocks()) : parsed.blocks;
+  const baseMd = config.includeFigures
+    ? md.replace(/\n## Figure legends[\s\S]*?(?=\n## References)/, "").trimEnd()
+    : md;
+  const parsed = parseMarkdown(baseMd, config);
+  const blocks = config.includeFigures ? parsed.blocks.concat(figureBlocks(md)) : parsed.blocks;
   const doc = new Document({
     creator: "Manuscript production workflow",
     title: config.title,
@@ -379,8 +401,7 @@ async function main() {
     includeFigures: false,
     plainJournal: true,
     plainTables: true,
-    header: "Measurement-source instability of hypotension labels",
-    title: "Blood pressure is not a single label",
+    title: "Measurement-source instability of ICU hypotension phenotypes",
     description: "Submission manuscript for Journal of Intensive Care",
   };
   await build(
@@ -391,7 +412,7 @@ async function main() {
   await build(
     path.join(ROOT, "manuscript", "MANUSCRIPT.md"),
     path.join(OUT, "Manuscript_JIC_Review_Copy_with_Figures.docx"),
-    { ...common, includeFigures: true, title: "Blood pressure is not a single label - review copy" },
+    { ...common, includeFigures: true, title: "Measurement-source instability of ICU hypotension phenotypes - review copy" },
   );
   await build(
     path.join(ROOT, "manuscript", "SUPPLEMENTARY_MATERIAL.md"),
@@ -404,7 +425,6 @@ async function main() {
       includeFigures: false,
       plainJournal: true,
       plainTables: true,
-      header: "Supplementary material - measurement-source instability",
       title: "Supplementary material",
       description: "Supplementary material for Journal of Intensive Care submission",
     },
@@ -420,7 +440,6 @@ async function main() {
       includeFigures: false,
       plainJournal: true,
       plainTables: true,
-      header: "Cover letter - Journal of Intensive Care",
       title: "Cover letter",
       description: "Cover letter for Journal of Intensive Care",
       compact: true,

@@ -3,7 +3,7 @@
 78fcb0ab125b2931c22ec2fbe496294a7d1bb319b2149b055db5f0c665b729e8       12571  audit/analysis_determinism_v2_1.json
 dd3d340cd167839b3d175fa2296a8e942257e48464cdbb7a8f0ed64a53a78937        4049  audit/corrected_package_gate_v2_1.json
 14ca5fa05db62a9feeeadf1a46b0b9f4b3b49884b68a3b47aa0cf05e41565a22        1391  audit/mimic_age_correction_v2_1.json
-0cb2c724654b10f58a68f4932a5c311f7ca306b1eba6de317c3de3b216ea6360         742  CITATION.cff
+dfa24b8a5b694d1d74c2bfdc44d4e50a4af436ecd80961ae4d499a563350d0d6         691  CITATION.cff
 51365bd2204e200b86a97f74bc2e0c626ef21eaeba774389ef0b8f313dfef98f         537  environment.json
 addff368b6847dff1d865142640b23dbd7b6c81b3966f2f89d4b5da72cde17d3     1289950  figures/Figure_1_graphical_abstract.png
 c7a0f420aa2e1dae7d54478704f118582257d2f7ad807a1b6ad7186a1ff4501d       49080  figures/Figure_2_measurement_instability.pdf
@@ -40,10 +40,10 @@ efe47508a633f45e393e18ba59d2749cade66a5e09a5ab0e2a0a9b263bc4dd0d        8065  pr
 f2f5045a074c65f19dacf59a7cfe6372187ab322f7f408b09655ec18c3a1711a        2754  protocol/PROTOCOL_v2.0_PRE_RESULT_RESTART.md
 37418538df59a44183202acc8693c03618c9c352bdbd4011661fada6e1ab6b5d       12567  protocol/SAP_v1.0.md
 4ff0be6aa35d522082f0ac2f04a048e09e5427d5f09bfb3afc4f03c492107606        3393  protocol/VARIABLE_CONTRACT_v1.0.json
-f2924d2c3ee4bdee6d4c699e27e5e3402eb3cc9078dea57b8370b370ff237133        3873  README.md
-5a6ea9a495c3816c3dd4c0d1be7d59429635547f2e39e7a3c677d574abae1ba3       12250  references/manuscript_references.bib
-9fc898a02d3110a570971eed0356a793cc606026dbac2b239f8bb2c171ea842d       17144  references/manuscript_references.json
-9634906969ef185ca51673e1fdaa83a1caf4d3e6bf9fbe8d30ec864eb2cf8eea        6302  references/manuscript_references_vancouver.md
+5451978aaf61af96ae19697293d7447d1de36519008a4950ee6145668fa32801        3828  README.md
+70e0db10dd0962f20222eb2c48dbd8855f8ebf818b93cc8f096383b7c9a7470a       12508  references/manuscript_references.bib
+94bfe10847127af7f177587b707aac290fad65beb0c79cdc3e76c8ce355ad7ca       17747  references/manuscript_references.json
+c176078eb2e4fb135301ef9a731762774931f5b075dfdf96bb4658d1e8d33eca        6371  references/manuscript_references_vancouver.md
 c51a29abc9df63c794082b481efccfe68fc2f2623a7d0606c2defe3555192ffc         987  RELEASE_NOTES.md
 48e7dc58bee3dea1f2ad4cf05d38d1e911b9c54672312bd72f5cce1ff4f61d5d         156  requirements-lock.txt
 f33539c0635abde28560757494bb611e41f08fbd100d9e1cec5a97fe0af9f715        5289  results/eicu_multiple_imputation_outcome_sensitivity_v2_1.json
@@ -64,10 +64,10 @@ b6da17c64be2f83ad6edf520fc83ea7837300a113caa02b2e051113292cd5791         659  SA
 84383b8f09f5cd54f21c4050293934e9398df85edbfeb8eee818305a2fe5995a       11978  scripts/analyze_measurement_subgroups.py
 ae1cd263be10450d62f1f7f383b1e6f9e01b5370391db54583e0e73bd1d6b737       11285  scripts/analyze_primary_measurements.py
 c00fff7267ca1c9b1c4176bef6ea74e967fed70df777b3eb853e906b2406fcc0       10534  scripts/audit_measurement_gates.py
-6e3cec1cee4ceb8c10d3feb86d3618565d32616baf22c31d554bde333648269a        1440  scripts/build_manuscript.py
-aa3cd5a4b7b7e1cf3038ce1337f3b50ba3f69830d91eee38b2b67aa920c93c3f        8766  scripts/build_manuscript_tables.py
-d91788ce3d3aa2148e9cb3ac76cff251ac54b32b1021c50a335fbf4669b33bfd       15768  scripts/build_submission_docx.js
-1481f184f701318f33c5522e041b3ecfa3ab9723ab3f70322deb1c7cb734d2a2       26486  scripts/build_supplement.py
+e8d58db99c2d43005ce55d5d9fed284218bb4140138ba5333358bd6d6302ed84         981  scripts/build_manuscript.py
+f65cd4edc22ab413e47bb98712eda89280baf9400a70e09cc689733b42d71e37        9667  scripts/build_manuscript_tables.py
+d0037d535234dd296d67f544963fbe142aa238b8a31695c0d7ede6e802a3bc7d       16171  scripts/build_submission_docx.js
+92e80085c742ef5e68ef526ff7b6e17f4d500408f0861652c41fc99b6a7636f5       26508  scripts/build_supplement.py
 6e80a50f3144cf13c07c6a93344c7342752fcc5807fdcb725b432bf571caea11       21272  scripts/create_publication_figures.py
 e4882dd7faef5633deb202e759380cea1f1c5893f513a1d5212d49b4aad9f966        4661  scripts/measurement_core.py
 e8dbdb377f3b2504e60340234c67d4ec1528644ce113482978dc7356e6bea01d        7320  scripts/run_measurement_sensitivities.py
@@ -76,7 +76,7 @@ b25b7341a91cbd5a985399c9ef16cd801d3becdba65c54b8d7b27e912977e9f3        3270  sc
 a0927d63e9415996ed6b17abce2ee971d1a22defc08bdd43a2e3d052af80665d        5731  scripts/verify_analysis_determinism_v2_1.py
 20bc74a314f8611695099f688d5a5c73329d3219f88dde567edf88b609db9d6f        1098  tables/eicu_multiple_imputation_outcome_sensitivity_v2_1.csv
 331f99f33228304107ea4ea06ce58de7bc89e396b0915926933dd1aa63b3e7e1       13982  tables/locked_outcome_estimands_v2.csv
-cdcd378b84d2b40eeb800a79b3ba277471b16d9fd8967bb0f808dfa0dc65d9e7        2575  tables/MAIN_TABLES.md
+5fc71619930cdfcf4aa35f259a15bab853053cba01fb07ce71ffa51415669d21        3454  tables/MAIN_TABLES.md
 aa1f9b1695cf66dac891aae4cbb74a8669f05d7b519e07be626f2bbb507350c8         207  tables/measurement_cohort_summary_v2.csv
 c3b3187e9e0efff1d2b4582680f6ebd7bf5e71b3b8606f68210645df0aacc086        2077  tables/measurement_estimands_v2.csv
 4cba13f46775677bb6f659175d1fee27c5ce0d73a5497d3330e3f18e9eb773ff         389  tables/measurement_extended_sensitivity_eicu_v2.csv
